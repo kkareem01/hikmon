@@ -649,7 +649,7 @@
     <section class="step" data-step="3" aria-labelledby="color-h">
       <div class="eyebrow">04 · Brand colors</div>
       <h2 id="color-h" class="step-h">Got brand colors?</h2>
-      <p class="step-sub">Drop in up to three hex codes. Don't have any? Skip — I'll pick something that works for HVAC.</p>
+      <p class="step-sub">Drop in up to three hex codes. Don't have any? Skip — I'll pick something that works for <span data-trade-name>HVAC</span>.</p>
 
       <div id="color-rows" style="display: flex; flex-direction: column; gap: 14px;">
         <div class="color-row">
@@ -754,37 +754,157 @@
   </main>
 
   <script>
-    // ============ HVAC SERVICES ============
-    const HVAC_SERVICES = [
-      "AC repair",
-      "AC install / replace",
-      "AC tune-ups",
-      "Furnace repair",
-      "Furnace install / replace",
-      "Furnace tune-ups",
-      "Heat pump install",
-      "Heat pump repair",
-      "Mini-split / ductless",
-      "Boiler repair / install",
-      "Ductwork install",
-      "Duct cleaning",
-      "Duct sealing",
-      "Indoor air quality (IAQ)",
-      "Air purification",
-      "Humidifier install",
-      "Dehumidifier install",
-      "UV light systems",
-      "Smart thermostats",
-      "HVAC zoning",
-      "Geothermal systems",
-      "Emergency / 24-7",
-      "Maintenance plans",
-      "Commercial HVAC",
-      "New construction HVAC",
-      "Refrigerant recharge",
-      "Energy audits",
-      "Financing options",
-    ];
+    // ============ TRADE SERVICES ============
+    const TRADE_SERVICES = {
+      'hvac': [
+        "AC repair", "AC install / replace", "AC tune-ups",
+        "Furnace repair", "Furnace install / replace", "Furnace tune-ups",
+        "Heat pump install", "Heat pump repair", "Mini-split / ductless",
+        "Boiler repair / install", "Ductwork install", "Duct cleaning",
+        "Duct sealing", "Indoor air quality (IAQ)", "Air purification",
+        "Humidifier install", "Dehumidifier install", "UV light systems",
+        "Smart thermostats", "HVAC zoning", "Geothermal systems",
+        "Emergency / 24-7", "Maintenance plans", "Commercial HVAC",
+        "New construction HVAC", "Refrigerant recharge", "Energy audits",
+        "Financing options",
+      ],
+      'plumbing': [
+        "Drain cleaning", "Water heater repair", "Water heater install",
+        "Tankless water heater", "Pipe repair", "Pipe install", "Repiping",
+        "Leak detection", "Slab leak repair", "Toilet repair", "Toilet install",
+        "Faucet repair", "Faucet install", "Garbage disposal", "Sump pump",
+        "Sewer line repair", "Sewer line replacement", "Hydro jetting",
+        "Camera inspection", "Backflow testing", "Gas line repair",
+        "Gas line install", "Water softener", "Water filtration",
+        "Bathroom remodel plumbing", "Kitchen plumbing", "Emergency / 24-7",
+        "Maintenance plans", "Commercial plumbing",
+      ],
+      'electrical': [
+        "Panel upgrade", "Panel replacement", "Subpanel install",
+        "Service upgrade", "Wiring repair", "Wiring install",
+        "Whole-home rewire", "Knob-and-tube replacement", "Outlet install",
+        "Outlet repair", "GFCI install", "Lighting install",
+        "Recessed lighting", "Landscape lighting", "Ceiling fan install",
+        "EV charger install", "Generator install", "Generator repair",
+        "Smoke detector install", "Surge protection", "Smart home wiring",
+        "Pool / hot tub wiring", "Solar wiring", "Code compliance",
+        "Inspections", "Emergency / 24-7", "Commercial electrical",
+        "Maintenance plans",
+      ],
+      'roofing': [
+        "Roof repair", "Roof replacement", "New roof install",
+        "Storm damage repair", "Hail damage repair", "Insurance claims help",
+        "Asphalt shingle", "Metal roof", "Tile roof", "Flat roof",
+        "Roof inspection", "Roof tune-up", "Gutter install", "Gutter repair",
+        "Skylight install", "Skylight repair", "Chimney flashing",
+        "Roof ventilation", "Attic insulation", "Soffit & fascia",
+        "Ice dam removal", "Emergency tarp", "Leak detection",
+        "Commercial roofing", "Maintenance plans", "Solar panel install",
+      ],
+      'garage-door': [
+        "Garage door repair", "Spring replacement", "Cable repair",
+        "Opener install", "Opener repair", "Roller replacement",
+        "Track repair", "Sensor repair", "Panel replacement",
+        "New door install", "Smart opener", "Insulated door upgrade",
+        "Custom doors", "Carriage-style doors", "Roll-up doors",
+        "Weather seal", "Remote control / keypad", "Off-track repair",
+        "Bent panel repair", "Emergency / 24-7", "Maintenance plans",
+        "Commercial garage doors",
+      ],
+      'pest-control': [
+        "Ant treatment", "Roach treatment", "Termite inspection",
+        "Termite treatment", "Rodent control", "Bedbug treatment",
+        "Spider treatment", "Wasp / bee removal", "Mosquito control",
+        "Tick control", "Flea control", "Wildlife removal", "Bird control",
+        "Snake removal", "Fumigation", "Quarterly maintenance",
+        "Monthly maintenance", "Pre-treatment for new home", "Bait stations",
+        "Eco-friendly / green pest control", "Commercial pest control",
+        "Restaurant pest control", "Emergency / urgent", "Inspections",
+      ],
+      'landscaping': [
+        "Lawn mowing", "Lawn fertilization", "Aeration", "Overseeding",
+        "Weed control", "Lawn install / sod", "Mulching", "Tree planting",
+        "Tree trimming", "Shrub trimming", "Hedge trimming", "Garden design",
+        "Hardscape (pavers / patio)", "Retaining walls", "Outdoor lighting",
+        "Irrigation install", "Irrigation repair", "Drainage", "French drains",
+        "Leaf cleanup", "Spring cleanup", "Fall cleanup", "Snow removal",
+        "Holiday lighting", "Commercial landscaping", "Maintenance plans",
+      ],
+      'pool': [
+        "Pool cleaning", "Pool maintenance", "Filter cleaning",
+        "Chemical balancing", "Equipment repair", "Pump repair", "Pump install",
+        "Heater repair", "Heater install", "Salt cell repair",
+        "Salt cell replacement", "Liner replacement", "Tile repair",
+        "Pool resurfacing", "Acid wash", "Algae treatment", "Pool opening",
+        "Pool closing", "Leak detection", "Pool inspection", "Cover install",
+        "Automation system", "Weekly service", "Bi-weekly service",
+        "Commercial pool",
+      ],
+      'cleaning': [
+        "House cleaning", "Deep cleaning", "Move-in cleaning",
+        "Move-out cleaning", "Post-construction cleaning", "Recurring weekly",
+        "Recurring bi-weekly", "Recurring monthly", "Carpet cleaning",
+        "Window cleaning", "Pressure washing", "Upholstery cleaning",
+        "Tile & grout cleaning", "Pet odor / urine", "Office cleaning",
+        "Airbnb / vacation rental", "Eco-friendly / green cleaning",
+        "Same-day service", "One-time clean", "Spring cleaning",
+        "Holiday cleaning", "Disinfection / sanitization", "Allergen cleaning",
+        "Hoarder cleanout",
+      ],
+      'painting': [
+        "Interior painting", "Exterior painting", "Cabinet painting",
+        "Trim painting", "Door painting", "Deck staining", "Fence painting",
+        "Drywall repair", "Wallpaper removal", "Wood staining",
+        "Pressure washing", "Caulking", "Color consultation",
+        "Texture / popcorn ceiling removal", "Stucco painting",
+        "Brick painting", "Concrete sealing", "Garage floor coating",
+        "Epoxy floors", "Commercial painting", "HOA painting",
+        "New construction paint", "Touch-ups", "Quick turnaround",
+      ],
+      'handyman': [
+        "TV mounting", "Furniture assembly", "Picture / shelf hanging",
+        "Door repair", "Door install", "Window screen repair", "Caulking",
+        "Drywall repair", "Painting touch-ups", "Faucet install",
+        "Toilet install", "Garbage disposal install", "Light fixture install",
+        "Ceiling fan install", "Smart home install", "Childproofing",
+        "Senior accessibility", "Grab bars", "Deck repair", "Fence repair",
+        "Gutter cleaning", "Pressure washing", "Yard cleanup", "Junk hauling",
+        "General repairs",
+      ],
+      'flooring': [
+        "Hardwood install", "Hardwood refinishing", "Laminate install",
+        "Vinyl install", "LVT / luxury vinyl install", "Tile install",
+        "Tile repair", "Carpet install", "Carpet repair", "Stair install",
+        "Stair refinishing", "Subfloor repair", "Floor leveling",
+        "Concrete polishing", "Epoxy floors", "Floor heating",
+        "Baseboard install", "Quarter round", "Bamboo flooring",
+        "Engineered hardwood", "Cork flooring", "Linoleum",
+        "Commercial flooring", "Floor maintenance", "Floor restoration",
+      ],
+    };
+
+    const TRADE_NAMES = {
+      'hvac': 'HVAC',
+      'plumbing': 'plumbing',
+      'electrical': 'electrical',
+      'roofing': 'roofing',
+      'garage-door': 'garage doors',
+      'pest-control': 'pest control',
+      'landscaping': 'landscaping',
+      'pool': 'pool service',
+      'cleaning': 'cleaning',
+      'painting': 'painting',
+      'handyman': 'handyman work',
+      'flooring': 'flooring',
+    };
+
+    const tradeParam = new URLSearchParams(location.search).get('trade');
+    const currentTrade = (tradeParam && TRADE_SERVICES[tradeParam]) ? tradeParam : 'hvac';
+    const currentTradeName = TRADE_NAMES[currentTrade];
+
+    document.querySelectorAll('[data-trade-name]').forEach(el => {
+      el.textContent = currentTradeName;
+    });
 
     // ============ STATE ============
     const state = {
@@ -962,7 +1082,7 @@
 
     // ============ SERVICES GRID ============
     const svcGrid = document.getElementById('svc-grid');
-    HVAC_SERVICES.forEach(svc => {
+    TRADE_SERVICES[currentTrade].forEach(svc => {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'svc';

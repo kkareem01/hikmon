@@ -1,6 +1,6 @@
 # Hikmon Color System
 
-Brand direction: warm + trustworthy for local home service business owners (HVAC, plumbing, electricians, roofers).
+Brand direction: warm + trustworthy for local home service business owners (HVAC, plumbing, electrical, roofing, garage door, pest control, landscaping, pool service, cleaning, painting, handyman, flooring).
 
 The palette signals **established** (deep forest green = banks, John Deere, insurance), **clean** (true white, not cream), and **craft-oriented** (amber = copper, leather, wood-tones).
 
