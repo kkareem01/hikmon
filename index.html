@@ -235,7 +235,7 @@
     }
 
     @media (max-width: 768px) {
-      .hero-headline { font-size: 36px !important; }
+      .hero-headline { font-size: clamp(18px, 5.3vw, 30px) !important; }
       .hero-subhead  { font-size: 17px !important; }
     }
 
@@ -1617,8 +1617,8 @@
 
       <!-- Headline -->
       <h1 class="font-display hero-headline text-white mt-6 mx-auto anim-fadeUp delay-200" style="font-size: clamp(38px, 5.2vw, 74px); line-height: 1.05; max-width: min(98vw, 1240px); letter-spacing: -0.025em;">
-        <span class="block md:whitespace-nowrap">Get top 3 on Google in 30 days,</span>
-        <span class="block md:whitespace-nowrap">or <span class="headline-emph">we work for free until you do.</span></span>
+        <span class="block whitespace-nowrap">Get top 3 on Google in 30 days,</span>
+        <span class="block whitespace-nowrap">or <span class="headline-emph">we work for free until you do.</span></span>
       </h1>
 
       <!-- Subhead -->
