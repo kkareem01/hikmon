@@ -1,0 +1,1003 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome to Hikmon — let's build your engine</title>
+  <meta name="description" content="Onboarding for new Hikmon clients. Share your business info and brand assets so we can start building." />
+  <meta name="robots" content="noindex,nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&family=Fragment+Mono&display=swap" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <style>
+    :root {
+      --white: #FFFFFF;
+      --white-elevated: #FAFAF7;
+      --hairline: #ECECE7;
+      --forest-deep: #1F3D2C;
+      --forest-mid: #2D5640;
+      --forest-light: #4A7359;
+      --amber-rich: #C97B19;
+      --amber-glow: #E0913B;
+      --amber-soft: #F5E4CC;
+      --charcoal: #1A1A1A;
+      --ash: #6B6B6B;
+      --ash-light: #9C9C9C;
+    }
+
+    * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      font-feature-settings: "ss01", "cv11";
+      color: var(--charcoal);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    em { font-style: italic; color: var(--amber-rich); }
+
+    /* ===== TOP CONFIRMATION BAND (dark anchor) ===== */
+    .confirm-band {
+      background:
+        radial-gradient(ellipse 60% 100% at 18% 0%, rgba(74, 115, 89, 0.30) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 100% at 92% 50%, rgba(201, 123, 25, 0.20) 0%, transparent 55%),
+        linear-gradient(180deg, #1F3D2C 0%, #1A3527 100%);
+      position: relative;
+    }
+    .grain {
+      position: absolute; inset: 0; pointer-events: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
+      opacity: 0.35;
+      mix-blend-mode: overlay;
+    }
+    .band-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px;
+      position: relative;
+    }
+    @media (max-width: 600px) {
+      .band-inner { padding: 14px 18px; }
+    }
+    .brand-row { display: flex; align-items: center; }
+    .brand-mark {
+      width: 30px; height: 30px;
+      border-radius: 8px;
+      background: var(--amber-rich);
+      display: inline-flex; align-items: center; justify-content: center;
+      color: white;
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+      font-size: 17px;
+      margin-right: 10px;
+      box-shadow: 0 4px 12px rgba(201, 123, 25, 0.32),
+                  inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+    .brand {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+      font-size: 18px;
+      color: white;
+      letter-spacing: -0.015em;
+    }
+    .receipt-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 12px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: rgba(255,255,255,0.86);
+      font-family: 'Fragment Mono', ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pulse {
+      width: 7px; height: 7px; border-radius: 999px;
+      background: #6FCF97;
+      box-shadow: 0 0 0 0 rgba(111, 207, 151, 0.6);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(111, 207, 151, 0.5); }
+      70%  { box-shadow: 0 0 0 8px rgba(111, 207, 151, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(111, 207, 151, 0); }
+    }
+    .progress-track {
+      height: 2px;
+      background: rgba(255,255,255,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--amber-rich), var(--amber-glow));
+      transition: width 600ms cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 0 12px rgba(224, 145, 59, 0.55);
+      width: 0%;
+    }
+
+    /* ===== FORM STAGE ===== */
+    .stage {
+      min-height: calc(100vh - 60px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 72px 28px;
+      position: relative;
+    }
+    @media (max-width: 600px) {
+      .stage { padding: 48px 20px; min-height: calc(100vh - 100px); }
+    }
+
+    .step {
+      width: 100%;
+      max-width: 720px;
+      display: none;
+    }
+    .step.active { display: block; }
+
+    /* Eyebrow */
+    .eyebrow {
+      font-family: 'Fragment Mono', ui-monospace, monospace;
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--amber-rich);
+      margin-bottom: 14px;
+    }
+
+    /* Step heading */
+    .step-h {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-variation-settings: "opsz" 60;
+      font-weight: 600;
+      font-size: 44px;
+      line-height: 1.1;
+      letter-spacing: -0.022em;
+      color: var(--forest-deep);
+      margin: 0 0 14px;
+    }
+    .step-h--xl {
+      font-size: 56px;
+      letter-spacing: -0.025em;
+    }
+    @media (max-width: 768px) {
+      .step-h { font-size: 30px; }
+      .step-h--xl { font-size: 36px; }
+    }
+    .step-sub {
+      color: var(--ash);
+      font-size: 17px;
+      line-height: 1.6;
+      margin: 0 0 32px;
+      max-width: 580px;
+    }
+    .step-sub--lg { font-size: 19px; }
+    @media (max-width: 768px) {
+      .step-sub, .step-sub--lg { font-size: 16px; }
+    }
+
+    /* ===== Inputs ===== */
+    .input-text {
+      width: 100%;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-variation-settings: "opsz" 32;
+      font-weight: 600;
+      font-size: 32px;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      color: var(--forest-deep);
+      background: transparent;
+      border: 0;
+      border-bottom: 2px solid var(--hairline);
+      padding: 8px 0;
+      transition: border-color 220ms ease;
+      outline: none;
+    }
+    .input-text::placeholder { color: var(--ash-light); font-weight: 400; }
+    .input-text:focus { border-bottom-color: var(--amber-rich); }
+    @media (max-width: 768px) {
+      .input-text { font-size: 22px; }
+    }
+
+    /* Color hex input */
+    .color-row {
+      display: flex; gap: 14px; align-items: center;
+    }
+    .color-swatch {
+      width: 56px; height: 56px;
+      border-radius: 12px;
+      border: 1px solid var(--hairline);
+      box-shadow: 0 4px 12px rgba(31, 61, 44, 0.08);
+      flex-shrink: 0;
+      transition: background 220ms ease;
+    }
+    .input-hex {
+      font-family: 'Fragment Mono', ui-monospace, monospace;
+      font-size: 16px;
+      color: var(--charcoal);
+      background: var(--white);
+      border: 1px solid var(--hairline);
+      border-radius: 10px;
+      padding: 13px 16px;
+      width: 180px;
+      outline: none;
+      transition: border-color 220ms ease, box-shadow 220ms ease;
+    }
+    .input-hex:focus {
+      border-color: var(--amber-rich);
+      box-shadow: 0 0 0 3px rgba(201, 123, 25, 0.12);
+    }
+    .color-label {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ash);
+    }
+
+    /* ===== File upload ===== */
+    .drop {
+      display: block;
+      border: 2px dashed var(--hairline);
+      border-radius: 16px;
+      padding: 44px 28px;
+      text-align: center;
+      cursor: pointer;
+      background: var(--white-elevated);
+      transition: border-color 220ms, background 220ms;
+    }
+    .drop:hover, .drop.drag {
+      border-color: var(--amber-rich);
+      background: #FFF8EE;
+    }
+    .drop-icon {
+      width: 52px; height: 52px;
+      border-radius: 14px;
+      background: var(--amber-soft);
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-bottom: 18px;
+      color: var(--amber-rich);
+    }
+    .drop-h {
+      font-family: 'Source Serif 4', serif;
+      font-variation-settings: "opsz" 22;
+      font-weight: 600;
+      font-size: 22px;
+      color: var(--forest-deep);
+      margin: 0 0 6px;
+      letter-spacing: -0.015em;
+    }
+    .drop-sub {
+      font-size: 14px;
+      color: var(--ash);
+      margin: 0;
+    }
+
+    .preview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .preview-tile {
+      position: relative;
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--white-elevated);
+      box-shadow: 0 1px 2px rgba(31, 61, 44, 0.06),
+                  0 2px 6px rgba(31, 61, 44, 0.04);
+    }
+    .preview-tile img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .preview-remove {
+      position: absolute; top: 6px; right: 6px;
+      width: 26px; height: 26px;
+      border-radius: 999px;
+      background: rgba(31, 61, 44, 0.88);
+      color: white;
+      border: 0;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      font-size: 14px; line-height: 1;
+      backdrop-filter: blur(4px);
+      transition: background 180ms;
+    }
+    .preview-remove:hover { background: var(--forest-deep); }
+    .upload-counter {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      color: var(--ash);
+      margin-top: 14px;
+    }
+
+    /* ===== Service tile grid ===== */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 10px;
+    }
+    @media (max-width: 600px) {
+      .svc-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
+    }
+    .svc {
+      position: relative;
+      padding: 13px 14px 13px 42px;
+      background: var(--white-elevated);
+      border: 1px solid var(--hairline);
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--charcoal);
+      transition: border-color 180ms, background 180ms, transform 180ms, color 180ms;
+      user-select: none;
+      text-align: left;
+      line-height: 1.3;
+    }
+    .svc:hover {
+      border-color: var(--forest-light);
+      transform: translateY(-1px);
+    }
+    .svc.checked {
+      background: var(--forest-deep);
+      color: white;
+      border-color: var(--forest-deep);
+    }
+    .svc::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px; height: 18px;
+      border: 1.5px solid var(--hairline);
+      border-radius: 5px;
+      background: var(--white);
+      transition: background 180ms, border-color 180ms;
+    }
+    .svc.checked::before {
+      background: var(--amber-rich);
+      border-color: var(--amber-rich);
+    }
+    .svc.checked::after {
+      content: "✓";
+      position: absolute;
+      left: 16.5px;
+      top: 50%;
+      transform: translateY(-55%);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    /* ===== Buttons ===== */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 14px 22px;
+      border-radius: 9999px;
+      font-family: 'Inter', system-ui, sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      line-height: 1;
+      cursor: pointer;
+      border: 0;
+      transition: transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1),
+                  background-color 200ms ease,
+                  box-shadow 200ms ease,
+                  border-color 200ms ease,
+                  color 200ms ease;
+      will-change: transform;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn:active { transform: translateY(0); }
+    .btn-amber {
+      background: var(--amber-rich);
+      color: var(--white);
+      box-shadow: 0 8px 24px rgba(201, 123, 25, 0.32),
+                  0 2px 6px rgba(201, 123, 25, 0.18),
+                  inset 0 1px 0 rgba(255,255,255,0.18);
+    }
+    .btn-amber:hover {
+      background: var(--amber-glow);
+      box-shadow: 0 12px 32px rgba(224, 145, 59, 0.40),
+                  0 2px 6px rgba(201, 123, 25, 0.20),
+                  inset 0 1px 0 rgba(255,255,255,0.22);
+    }
+    .btn-amber:focus-visible {
+      outline: 2px solid var(--amber-glow);
+      outline-offset: 3px;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ash);
+      padding: 14px 16px;
+      box-shadow: none;
+    }
+    .btn-ghost:hover { color: var(--charcoal); transform: translateY(0); }
+    .btn-ghost:focus-visible {
+      outline: 2px solid var(--forest-light);
+      outline-offset: 3px;
+      border-radius: 9999px;
+    }
+
+    .controls {
+      display: flex; gap: 10px; align-items: center;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+    .enter-hint {
+      font-family: 'Fragment Mono', ui-monospace, monospace;
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--ash-light);
+      margin-left: auto;
+    }
+    @media (max-width: 600px) {
+      .enter-hint { display: none; }
+    }
+    .enter-hint kbd {
+      display: inline-block;
+      padding: 2px 6px;
+      background: var(--white-elevated);
+      border: 1px solid var(--hairline);
+      border-bottom-width: 2px;
+      border-radius: 4px;
+      font-family: inherit;
+      color: var(--charcoal);
+    }
+
+    .skip-link {
+      color: var(--ash);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: auto;
+      transition: color 180ms;
+    }
+    .skip-link:hover { color: var(--charcoal); }
+    @media (max-width: 600px) {
+      .skip-link { margin-left: 0; }
+    }
+
+    /* ===== Timeline ===== */
+    .timeline {
+      margin-top: 36px;
+      border-top: 1px solid var(--hairline);
+      padding-top: 28px;
+    }
+    .tl-row {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 18px;
+      padding: 13px 0;
+      align-items: start;
+    }
+    @media (max-width: 600px) {
+      .tl-row { grid-template-columns: 1fr; gap: 4px; }
+    }
+    .tl-when {
+      font-family: 'Fragment Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--amber-rich);
+      padding-top: 4px;
+    }
+    .tl-what {
+      font-size: 16px;
+      color: var(--charcoal);
+      line-height: 1.55;
+    }
+    .tl-what strong {
+      color: var(--forest-deep);
+      font-weight: 600;
+    }
+
+    /* ===== Success screen ===== */
+    .check-mark {
+      width: 80px; height: 80px;
+      border-radius: 999px;
+      background: var(--forest-deep);
+      display: inline-flex; align-items: center; justify-content: center;
+      box-shadow: 0 12px 32px rgba(31, 61, 44, 0.20),
+                  0 2px 6px rgba(31, 61, 44, 0.10),
+                  inset 0 1px 0 rgba(255,255,255,0.10);
+      margin-bottom: 28px;
+      position: relative;
+    }
+    .check-mark::after {
+      content: "";
+      position: absolute;
+      inset: -8px;
+      border-radius: 999px;
+      border: 1px solid var(--amber-soft);
+      opacity: 0.6;
+    }
+    .check-mark svg { color: var(--amber-glow); }
+
+    .footer-line {
+      margin-top: 36px;
+      padding-top: 28px;
+      border-top: 1px solid var(--hairline);
+      color: var(--ash);
+      font-size: 14px;
+    }
+    .footer-line a {
+      color: var(--amber-rich);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms;
+    }
+    .footer-line a:hover { border-bottom-color: var(--amber-rich); }
+
+    /* Honor reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP DARK CONFIRMATION BAND -->
+  <header class="confirm-band">
+    <div class="grain"></div>
+    <div class="band-inner">
+      <div class="brand-row">
+        <span class="brand-mark">H</span>
+        <span class="brand">Hikmon</span>
+      </div>
+      <div class="receipt-pill">
+        <span class="pulse"></span>
+        Payment received · Onboarding active
+      </div>
+    </div>
+    <div class="progress-track" aria-hidden="true">
+      <div id="progress" class="progress-fill"></div>
+    </div>
+  </header>
+
+  <!-- FORM STAGE -->
+  <main class="stage">
+
+    <!-- STEP 0: WELCOME -->
+    <section class="step active" data-step="0" aria-labelledby="welcome-h">
+      <div class="eyebrow">01 · Welcome</div>
+      <h1 id="welcome-h" class="step-h step-h--xl">You're in.<br/>Let's get your engine running.</h1>
+      <p class="step-sub step-sub--lg">
+        The next 4 minutes: I'll grab your business details and brand assets so I can start building. Then we hop on a quick screen-share to connect your Google Business Profile, and you're done. I take it from there.
+      </p>
+
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-when">Now</div>
+          <div class="tl-what"><strong>Fill out this form below.</strong> Takes about 4 minutes. You'll receive a copy by email.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">Today</div>
+          <div class="tl-what"><strong>Grant me Google Business Profile access</strong> — we'll do this live on our call.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">Days 1–7</div>
+          <div class="tl-what"><strong>I build your engine.</strong> Site goes live, GBP fully optimized for your service area, tracking installed.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">Day 30</div>
+          <div class="tl-what"><strong>Top 3 on Google Maps</strong> — or every month after is free until you rank.</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-amber" data-next>Let's go <span aria-hidden="true">→</span></button>
+        <span class="enter-hint">press <kbd>Enter</kbd></span>
+      </div>
+    </section>
+
+    <!-- STEP 1: BUSINESS NAME -->
+    <section class="step" data-step="1" aria-labelledby="bn-h">
+      <div class="eyebrow">02 · Business name</div>
+      <h2 id="bn-h" class="step-h">What's your business called?</h2>
+      <p class="step-sub">Use the exact name you want shown on Google and your website.</p>
+      <input id="biz-name" class="input-text" type="text" aria-labelledby="bn-h" placeholder="e.g. Smith &amp; Sons Heating and Cooling" autocomplete="organization" />
+      <div class="controls">
+        <button class="btn btn-ghost" data-prev>← Back</button>
+        <button class="btn btn-amber" data-next>Continue <span aria-hidden="true">→</span></button>
+        <span class="enter-hint">press <kbd>Enter</kbd></span>
+      </div>
+    </section>
+
+    <!-- STEP 2: LOGO -->
+    <section class="step" data-step="2" aria-labelledby="logo-h">
+      <div class="eyebrow">03 · Logo</div>
+      <h2 id="logo-h" class="step-h">Upload your logo.</h2>
+      <p class="step-sub">PNG with transparent background works best. SVG even better. No logo? Skip — I'll create a clean wordmark for you.</p>
+
+      <label class="drop" id="logo-drop" for="logo-input">
+        <div class="drop-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M12 4l-5 5M12 4l5 5"/><path d="M5 20h14"/></svg>
+        </div>
+        <p class="drop-h">Drop your logo or click to browse</p>
+        <p class="drop-sub">PNG, JPG, SVG · up to 10MB</p>
+        <input id="logo-input" type="file" accept="image/*,.svg" hidden aria-label="Upload logo" />
+      </label>
+      <div id="logo-preview" class="preview-grid"></div>
+
+      <div class="controls">
+        <button class="btn btn-ghost" data-prev>← Back</button>
+        <button class="btn btn-amber" data-next>Continue <span aria-hidden="true">→</span></button>
+        <a class="skip-link" data-next role="button" tabindex="0">No logo — skip</a>
+      </div>
+    </section>
+
+    <!-- STEP 3: BRAND COLORS -->
+    <section class="step" data-step="3" aria-labelledby="color-h">
+      <div class="eyebrow">04 · Brand colors</div>
+      <h2 id="color-h" class="step-h">Got brand colors?</h2>
+      <p class="step-sub">Drop in up to three hex codes. Don't have any? Skip — I'll pick something that works for HVAC.</p>
+
+      <div id="color-rows" style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="color-row">
+          <div class="color-swatch" data-swatch style="background: #ECECE7;"></div>
+          <input class="input-hex" type="text" placeholder="#1F3D2C" maxlength="7" data-hex aria-label="Primary color hex" />
+          <span class="color-label">Primary</span>
+        </div>
+        <div class="color-row">
+          <div class="color-swatch" data-swatch style="background: #ECECE7;"></div>
+          <input class="input-hex" type="text" placeholder="#FFFFFF" maxlength="7" data-hex aria-label="Secondary color hex" />
+          <span class="color-label">Secondary</span>
+        </div>
+        <div class="color-row">
+          <div class="color-swatch" data-swatch style="background: #ECECE7;"></div>
+          <input class="input-hex" type="text" placeholder="#C97B19" maxlength="7" data-hex aria-label="Accent color hex" />
+          <span class="color-label">Accent</span>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-ghost" data-prev>← Back</button>
+        <button class="btn btn-amber" data-next>Continue <span aria-hidden="true">→</span></button>
+        <a class="skip-link" data-next role="button" tabindex="0">No colors — pick for me</a>
+      </div>
+    </section>
+
+    <!-- STEP 4: PHOTOS -->
+    <section class="step" data-step="4" aria-labelledby="photo-h">
+      <div class="eyebrow">05 · Photos</div>
+      <h2 id="photo-h" class="step-h">Show me your work.</h2>
+      <p class="step-sub">Photos of your team, trucks, completed installs — anything that makes you look real and trustworthy. The more the better.</p>
+
+      <label class="drop" id="photo-drop" for="photo-input">
+        <div class="drop-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        </div>
+        <p class="drop-h">Drop photos or click to browse</p>
+        <p class="drop-sub">JPG, PNG, HEIC · up to 30 photos</p>
+        <input id="photo-input" type="file" accept="image/*" multiple hidden aria-label="Upload photos" />
+      </label>
+      <div id="photo-counter" class="upload-counter" hidden>0 / 30 photos</div>
+      <div id="photo-preview" class="preview-grid"></div>
+
+      <div class="controls">
+        <button class="btn btn-ghost" data-prev>← Back</button>
+        <button class="btn btn-amber" data-next>Continue <span aria-hidden="true">→</span></button>
+        <a class="skip-link" data-next role="button" tabindex="0">No photos yet — skip</a>
+      </div>
+    </section>
+
+    <!-- STEP 5: SERVICES NOT OFFERED -->
+    <section class="step" data-step="5" aria-labelledby="svc-h">
+      <div class="eyebrow">06 · Services scope</div>
+      <h2 id="svc-h" class="step-h">What do you <em>not</em> offer?</h2>
+      <p class="step-sub">Tap anything you don't do. The rest = the services I'll build pages for and target on Google.</p>
+
+      <div id="svc-grid" class="svc-grid" role="group" aria-label="Services not offered"></div>
+
+      <div style="margin-top: 18px;">
+        <input id="svc-other" class="input-hex" type="text" placeholder="Anything else? (optional)" style="width: 100%; max-width: 480px;" aria-label="Other services not offered" />
+      </div>
+
+      <div class="controls">
+        <button class="btn btn-ghost" data-prev>← Back</button>
+        <button class="btn btn-amber" id="submit-btn">Submit &amp; finish <span aria-hidden="true">✓</span></button>
+      </div>
+    </section>
+
+    <!-- STEP 6: SUCCESS -->
+    <section class="step" data-step="6" aria-labelledby="done-h">
+      <div class="check-mark" aria-hidden="true">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="eyebrow">07 · Done</div>
+      <h2 id="done-h" class="step-h">That's it. You're set.</h2>
+      <p class="step-sub step-sub--lg">A copy of your responses just hit your inbox. Nothing else for you to do — I'll take it from here.</p>
+
+      <div class="timeline">
+        <div class="tl-row">
+          <div class="tl-when">Today</div>
+          <div class="tl-what"><strong>Grant me Google Business Profile access</strong> on our call (already happening).</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">This week</div>
+          <div class="tl-what"><strong>I build everything.</strong> Your site, GBP optimization, and tracking — fully assembled.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">Day 7</div>
+          <div class="tl-what"><strong>Site goes live</strong> at your domain. Walkthrough video sent to your inbox.</div>
+        </div>
+        <div class="tl-row">
+          <div class="tl-when">Day 30</div>
+          <div class="tl-what"><strong>Top 3 on Google Maps</strong> — or every month after is free until you rank.</div>
+        </div>
+      </div>
+
+      <div class="footer-line">
+        Need anything? Email <a href="mailto:hello@hikmon.com">hello@hikmon.com</a> or visit <a href="/">hikmon.com</a>.
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    // ============ HVAC SERVICES ============
+    const HVAC_SERVICES = [
+      "AC repair",
+      "AC install / replace",
+      "AC tune-ups",
+      "Furnace repair",
+      "Furnace install / replace",
+      "Furnace tune-ups",
+      "Heat pump install",
+      "Heat pump repair",
+      "Mini-split / ductless",
+      "Boiler repair / install",
+      "Ductwork install",
+      "Duct cleaning",
+      "Duct sealing",
+      "Indoor air quality (IAQ)",
+      "Air purification",
+      "Humidifier install",
+      "Dehumidifier install",
+      "UV light systems",
+      "Smart thermostats",
+      "HVAC zoning",
+      "Geothermal systems",
+      "Emergency / 24-7",
+      "Maintenance plans",
+      "Commercial HVAC",
+      "New construction HVAC",
+      "Refrigerant recharge",
+      "Energy audits",
+      "Financing options",
+    ];
+
+    // ============ STATE ============
+    const state = {
+      stepIndex: 0,
+      maxFormStep: 5,
+      bizName: '',
+      logo: null,
+      colors: ['', '', ''],
+      photos: [],
+      servicesNotOffered: new Set(),
+      servicesOther: ''
+    };
+
+    // ============ STEP NAVIGATION ============
+    const progressEl = document.getElementById('progress');
+
+    function goToStep(idx) {
+      if (idx < 0 || idx > 6) return;
+      const current = document.querySelector('.step.active');
+      const next = document.querySelector(`.step[data-step="${idx}"]`);
+      if (!next || current === next) return;
+
+      if (window.gsap) {
+        gsap.to(current, {
+          opacity: 0,
+          y: -8,
+          duration: 0.22,
+          ease: 'power2.in',
+          onComplete: () => {
+            current.classList.remove('active');
+            next.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'instant' });
+            gsap.fromTo(next,
+              { opacity: 0, y: 12 },
+              { opacity: 1, y: 0, duration: 0.42, ease: 'power3.out' }
+            );
+            focusFirstInput(next);
+          }
+        });
+      } else {
+        current.classList.remove('active');
+        next.classList.add('active');
+        focusFirstInput(next);
+      }
+
+      state.stepIndex = idx;
+      updateProgress();
+    }
+
+    function focusFirstInput(step) {
+      const input = step.querySelector('input[type="text"]:not([hidden])');
+      if (input) setTimeout(() => input.focus(), 60);
+    }
+
+    function updateProgress() {
+      const pct = state.stepIndex >= 6 ? 100 : (state.stepIndex / state.maxFormStep) * 100;
+      progressEl.style.width = `${pct}%`;
+    }
+
+    document.addEventListener('click', (e) => {
+      const nextEl = e.target.closest('[data-next]');
+      const prevEl = e.target.closest('[data-prev]');
+      if (nextEl) { e.preventDefault(); goToStep(state.stepIndex + 1); }
+      else if (prevEl) { e.preventDefault(); goToStep(state.stepIndex - 1); }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey && state.stepIndex < 6) {
+        const tag = (e.target.tagName || '').toLowerCase();
+        if (tag === 'textarea') return;
+        if (state.stepIndex === 5) {
+          e.preventDefault();
+          document.getElementById('submit-btn').click();
+        } else {
+          e.preventDefault();
+          goToStep(state.stepIndex + 1);
+        }
+      }
+    });
+
+    // ============ FILE UPLOADS ============
+    function setupFileInput({ inputId, dropId, previewId, multiple, target, counterId, max }) {
+      const input = document.getElementById(inputId);
+      const drop = document.getElementById(dropId);
+      const preview = document.getElementById(previewId);
+      const counter = counterId ? document.getElementById(counterId) : null;
+
+      drop.addEventListener('dragover', (e) => { e.preventDefault(); drop.classList.add('drag'); });
+      drop.addEventListener('dragleave', () => drop.classList.remove('drag'));
+      drop.addEventListener('drop', (e) => {
+        e.preventDefault();
+        drop.classList.remove('drag');
+        handleFiles(e.dataTransfer.files);
+      });
+      input.addEventListener('change', (e) => handleFiles(e.target.files));
+
+      function handleFiles(fileList) {
+        const arr = Array.from(fileList);
+        if (!multiple) {
+          state[target] = arr[0] || null;
+          preview.innerHTML = '';
+          if (arr[0]) addPreview(arr[0]);
+        } else {
+          state[target] = state[target].concat(arr).slice(0, max || 30);
+          preview.innerHTML = '';
+          state[target].forEach(addPreview);
+        }
+        updateCounter();
+      }
+
+      function addPreview(file) {
+        const tile = document.createElement('div');
+        tile.className = 'preview-tile';
+        const url = URL.createObjectURL(file);
+        const img = document.createElement('img');
+        img.src = url;
+        img.alt = '';
+        const btn = document.createElement('button');
+        btn.className = 'preview-remove';
+        btn.type = 'button';
+        btn.setAttribute('aria-label', 'Remove');
+        btn.textContent = '×';
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          e.preventDefault();
+          if (multiple) {
+            state[target] = state[target].filter(f => f !== file);
+          } else {
+            state[target] = null;
+          }
+          tile.remove();
+          updateCounter();
+        });
+        tile.appendChild(img);
+        tile.appendChild(btn);
+        preview.appendChild(tile);
+      }
+
+      function updateCounter() {
+        if (!counter) return;
+        const count = multiple ? state[target].length : (state[target] ? 1 : 0);
+        if (count > 0) {
+          counter.hidden = false;
+          counter.textContent = `${count} / ${max} photos`;
+        } else {
+          counter.hidden = true;
+        }
+      }
+    }
+
+    setupFileInput({ inputId: 'logo-input', dropId: 'logo-drop', previewId: 'logo-preview', multiple: false, target: 'logo' });
+    setupFileInput({ inputId: 'photo-input', dropId: 'photo-drop', previewId: 'photo-preview', multiple: true, target: 'photos', counterId: 'photo-counter', max: 30 });
+
+    // ============ COLOR INPUTS ============
+    document.querySelectorAll('[data-hex]').forEach((input, i) => {
+      const swatch = input.parentElement.querySelector('[data-swatch]');
+      input.addEventListener('input', (e) => {
+        let v = e.target.value.trim();
+        if (v && !v.startsWith('#')) v = '#' + v;
+        e.target.value = v.toUpperCase();
+        if (/^#[0-9A-F]{6}$/i.test(v)) {
+          swatch.style.background = v;
+          state.colors[i] = v;
+        } else if (v === '' || v === '#') {
+          swatch.style.background = '#ECECE7';
+          state.colors[i] = '';
+        }
+      });
+    });
+
+    // ============ BUSINESS NAME ============
+    document.getElementById('biz-name').addEventListener('input', (e) => {
+      state.bizName = e.target.value.trim();
+    });
+
+    // ============ SERVICES GRID ============
+    const svcGrid = document.getElementById('svc-grid');
+    HVAC_SERVICES.forEach(svc => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'svc';
+      btn.textContent = svc;
+      btn.setAttribute('aria-pressed', 'false');
+      btn.addEventListener('click', () => {
+        const checked = btn.classList.toggle('checked');
+        btn.setAttribute('aria-pressed', checked ? 'true' : 'false');
+        if (checked) state.servicesNotOffered.add(svc);
+        else state.servicesNotOffered.delete(svc);
+      });
+      svcGrid.appendChild(btn);
+    });
+    document.getElementById('svc-other').addEventListener('input', (e) => {
+      state.servicesOther = e.target.value;
+    });
+
+    // ============ SUBMIT ============
+    document.getElementById('submit-btn').addEventListener('click', async () => {
+      const payload = {
+        bizName: state.bizName,
+        logo: state.logo ? { name: state.logo.name, size: state.logo.size, type: state.logo.type } : null,
+        colors: state.colors.filter(Boolean),
+        photos: state.photos.map(p => ({ name: p.name, size: p.size, type: p.type })),
+        servicesNotOffered: Array.from(state.servicesNotOffered),
+        servicesOther: state.servicesOther,
+        submittedAt: new Date().toISOString()
+      };
+      console.log('[onboarding payload]', payload);
+      // Backend wiring (Cloudinary upload + email + database) comes next phase.
+      goToStep(6);
+    });
+
+    // ============ INIT ============
+    updateProgress();
+  </script>
+</body>
+</html>
