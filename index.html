@@ -235,7 +235,13 @@
     }
 
     @media (max-width: 768px) {
-      .hero-headline { font-size: clamp(18px, 5.3vw, 30px) !important; }
+      .hero-headline {
+        font-size: clamp(26px, 7.2vw, 34px) !important;
+        letter-spacing: -0.04em !important;
+        max-width: calc(100vw - 16px) !important;
+        margin-left: -16px !important;
+        margin-right: -16px !important;
+      }
       .hero-subhead  { font-size: 17px !important; }
     }
 
