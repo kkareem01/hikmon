@@ -47,6 +47,14 @@ const server = createServer(async (req, res) => {
       try { s = await stat(filePath); } catch { s = null; }
     }
 
+    if (!s && !extname(filePath)) {
+      const htmlPath = filePath + '.html';
+      try {
+        const hs = await stat(htmlPath);
+        if (hs.isFile()) { filePath = htmlPath; s = hs; }
+      } catch {}
+    }
+
     if (!s || !s.isFile()) {
       res.writeHead(404, { 'Content-Type': 'text/plain' });
       res.end('Not found');

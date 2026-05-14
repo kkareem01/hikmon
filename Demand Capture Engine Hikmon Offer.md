@@ -42,7 +42,7 @@
 
 **The New Way (the Owned Pin Protocol):**
 
-> • **Flat $397 / 4 weeks (or $297 / 4 weeks on an annual plan) — no setup fee, ever.** Affordable in February. Affordable in July.
+> • **Flat $397 / 4 weeks, or $3,564 paid upfront for the year (saves $1,200 — works out to $297 / 4 weeks equivalent) — no setup fee, ever.** Affordable in February. Affordable in July.
 • **You see the demo site before you pay a dollar.** No promises. You see what your version of the site will look like, then decide.
 • **Top 3 on Google in 30 days — or we work free until you are.** Specific position. Specific timeline. Specific remedy.
 • **Forms route directly to the owner's cell phone.** No "lead portal." No 5-minute response window blown.
@@ -115,19 +115,19 @@
 > • **Bonus 1 — The Free Demo Site (Pre-Sale Asset):** Before you pay a dollar, we build a working demo of your custom trade website. You see exactly what you'd get. No promises, no mockups, real site. *Equivalent agency value: $1,500–$3,000*
 • **Bonus 2 — The Demand Capture Audit:** A custom 1-page diagnosis showing where you currently rank, who's beating you, what they're doing right, and what we'll change first. *Equivalent agency value: $750*
 • **Bonus 3 — Lead Snap Dashboard Access:** Real-time visibility into your GBP performance, review velocity, ranking position, and form submissions — included free for as long as you're a client. *Equivalent SaaS value: $1,200/year*
-• **Bonus 4 (Annual plan only) — Locked-In Pricing for Life:** Anyone who commits to 12 months locks in $297 / 4 weeks forever.
+• **Bonus 4 (Annual plan only) — Locked-In Pricing for Life:** Anyone who pays $3,564 upfront for the year locks in the equivalent of $297 / 4 weeks forever (renewable at the same rate).
 > 
 
-**Total Stack Value:** $5,000+ in equivalent agency / SaaS value, delivered for $297–$397/month.
+**Total Stack Value:** $5,000+ in equivalent agency / SaaS value, delivered for $397/mo or $3,564/year upfront ($297/mo equivalent).
 
 **Your Price (recommended structure):**
 
 > • **Standard:** $397 / 4 weeks, cancel anytime
-• **Committed:** $297 / 4 weeks on a annual plan
+• **Committed:** $3,564 paid upfront for the year ($297 / 4 weeks equivalent — save $1,200 vs. monthly)
 • **No setup fee. Ever.**
 > 
 
-**Pricing rationale:** Your pricing is your weapon. Median home service marketing retainer is $2,500–$8,500/mo with $5K–$15K upfront (HVAC reference; comparable across trades). Townsquare's "cheap" tier is $249/mo and is widely considered low-quality. You sit at $297–$397/mo with a CRO-built website included and a real ranking guarantee. **Don't raise the price on cold traffic. The price IS the wedge.** Once you have 20+ ranked clients, you can test $497/$397 — but not before.
+**Pricing rationale:** Your pricing is your weapon. Median home service marketing retainer is $2,500–$8,500/mo with $5K–$15K upfront (HVAC reference; comparable across trades). Townsquare's "cheap" tier is $249/mo and is widely considered low-quality. You sit at $397/mo (or $3,564 upfront for the year — saves $1,200, equivalent to $297/mo) with a CRO-built website included and a real ranking guarantee. **Don't raise the price on cold traffic. The price IS the wedge.** Once you have 20+ ranked clients, you can test $497/$397 — but not before.
 
 ---
 
@@ -228,7 +228,7 @@ Category:     Demand Capture Engineering
 Mechanism:    The Demand Capture Engine™
 Promise:      Top 3 on Google Maps in 30 days
 Timeframe:    30 days
-Price:        $397 / 4 weeks or $297 / 4 weeks (1yr)
+Price:        $397 / 4 weeks monthly, or $3,564 upfront for 1 year ($297/4wk equivalent, saves $1,200)
 Setup Fee:    $0
 Guarantee:    Top 3 in 30 days or we work for free until you're ranked.
               Cancel anytime.
