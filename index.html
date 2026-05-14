@@ -236,8 +236,9 @@
 
     @media (max-width: 768px) {
       .hero-headline {
-        font-size: clamp(26px, 7.2vw, 34px) !important;
+        font-size: clamp(36px, 10.5vw, 50px) !important;
         letter-spacing: -0.04em !important;
+        line-height: 1.08 !important;
         max-width: calc(100vw - 16px) !important;
         margin-left: -16px !important;
         margin-right: -16px !important;
@@ -1623,8 +1624,18 @@
 
       <!-- Headline -->
       <h1 class="font-display hero-headline text-white mt-6 mx-auto anim-fadeUp delay-200" style="font-size: clamp(38px, 5.2vw, 74px); line-height: 1.05; max-width: min(98vw, 1240px); letter-spacing: -0.025em;">
-        <span class="block whitespace-nowrap">Get top 3 on Google in 30 days,</span>
-        <span class="block whitespace-nowrap">or <span class="headline-emph">we work for free until you do.</span></span>
+        <!-- Desktop: 2 lines -->
+        <span class="hidden md:block">
+          <span class="block whitespace-nowrap" style="font-weight: 700;">Get top 3 on Google in 30 days,</span>
+          <span class="block whitespace-nowrap"><span style="color: var(--amber-glow);">or</span> <span class="headline-emph">we work for free until you do.</span></span>
+        </span>
+        <!-- Mobile: 4 lines -->
+        <span class="block md:hidden">
+          <span class="block" style="font-weight: 700;">Get top 3 on Google</span>
+          <span class="block" style="font-weight: 700;">in 30 days,</span>
+          <span class="block"><span style="color: var(--amber-glow);">or</span> <span class="headline-emph">we work for free</span></span>
+          <span class="block headline-emph">until you do.</span>
+        </span>
       </h1>
 
       <!-- Subhead -->
