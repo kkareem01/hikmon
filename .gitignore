@@ -20,3 +20,6 @@ temporary screenshots/
 # Env
 .env
 .env.local
+
+# Vercel
+.vercel

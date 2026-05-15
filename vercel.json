@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "functions": {
+    "api/*.js": { "maxDuration": 15 }
+  },
+  "rewrites": [
+    { "source": "/welcome", "destination": "/welcome.html" }
+  ]
 }

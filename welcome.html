@@ -573,6 +573,10 @@
     </div>
   </header>
 
+  <!-- NON-BLOCKING SESSION NOTICE -->
+  <div id="session-banner" role="status" hidden
+       style="background: #FFF8EE; border-bottom: 1px solid var(--amber-soft); color: var(--amber-rich); font-family: 'Inter', system-ui, sans-serif; font-size: 14px; line-height: 1.5; padding: 12px 28px; text-align: center;"></div>
+
   <!-- FORM STAGE -->
   <main class="stage">
 
@@ -609,12 +613,17 @@
       </div>
     </section>
 
-    <!-- STEP 1: BUSINESS NAME -->
+    <!-- STEP 1: BUSINESS NAME + TRADE -->
     <section class="step" data-step="1" aria-labelledby="bn-h">
-      <div class="eyebrow">02 · Business name</div>
+      <div class="eyebrow">02 · Your business</div>
       <h2 id="bn-h" class="step-h">What's your business called?</h2>
       <p class="step-sub">Use the exact name you want shown on Google and your website.</p>
       <input id="biz-name" class="input-text" type="text" aria-labelledby="bn-h" placeholder="e.g. Smith &amp; Sons Heating and Cooling" autocomplete="organization" />
+
+      <label for="trade-select" style="display: block; margin-top: 30px; font-family: 'Fragment Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ash);">Your trade</label>
+      <p class="step-sub" style="margin-top: 6px;">This sets which services I build pages for. Pick the closest match.</p>
+      <select id="trade-select" class="input-hex" style="margin-top: 4px; width: 100%; max-width: 360px; cursor: pointer;" aria-label="Your trade"></select>
+
       <div class="controls">
         <button class="btn btn-ghost" data-prev>← Back</button>
         <button class="btn btn-amber" data-next>Continue <span aria-hidden="true">→</span></button>
@@ -712,6 +721,9 @@
         <input id="svc-other" class="input-hex" type="text" placeholder="Anything else? (optional)" style="width: 100%; max-width: 480px;" aria-label="Other services not offered" />
       </div>
 
+      <div id="submit-error" role="alert" hidden
+           style="margin-top: 18px; padding: 13px 16px; background: #FDEEEE; border: 1px solid #E8C4C4; border-radius: 10px; color: #9B2C2C; font-family: 'Inter', system-ui, sans-serif; font-size: 14px; line-height: 1.5;"></div>
+
       <div class="controls">
         <button class="btn btn-ghost" data-prev>← Back</button>
         <button class="btn btn-amber" id="submit-btn">Submit &amp; finish <span aria-hidden="true">✓</span></button>
@@ -745,6 +757,8 @@
           <div class="tl-what"><strong>Top 3 on Google Maps</strong> — or every month after is free until you rank.</div>
         </div>
       </div>
+
+      <div id="profile-snapshot" hidden style="margin-top: 32px;"></div>
 
       <div class="footer-line">
         Need anything? Email <a href="mailto:hello@hikmon.com">hello@hikmon.com</a> or visit <a href="/">hikmon.com</a>.
@@ -898,13 +912,21 @@
       'flooring': 'flooring',
     };
 
-    const tradeParam = new URLSearchParams(location.search).get('trade');
-    const currentTrade = (tradeParam && TRADE_SERVICES[tradeParam]) ? tradeParam : 'hvac';
-    const currentTradeName = TRADE_NAMES[currentTrade];
+    const urlParams = new URLSearchParams(location.search);
+    const tradeParam = urlParams.get('trade');
+    let currentTrade = (tradeParam && TRADE_SERVICES[tradeParam]) ? tradeParam : 'hvac';
+    let currentTradeName = TRADE_NAMES[currentTrade];
 
-    document.querySelectorAll('[data-trade-name]').forEach(el => {
-      el.textContent = currentTradeName;
-    });
+    function applyTradeLabels() {
+      document.querySelectorAll('[data-trade-name]').forEach(el => {
+        el.textContent = currentTradeName;
+      });
+    }
+    applyTradeLabels();
+
+    // ============ CLOUDINARY (public config — cloud name + unsigned preset) ============
+    const CLOUDINARY_CLOUD_NAME = 'hikmon';
+    const CLOUDINARY_UPLOAD_PRESET = 'hikmon_onboarding_unsigned';
 
     // ============ STATE ============
     const state = {
@@ -915,7 +937,13 @@
       colors: ['', '', ''],
       photos: [],
       servicesNotOffered: new Set(),
-      servicesOther: ''
+      servicesOther: '',
+      sessionId: urlParams.get('session_id') || null,
+      plan: null,
+      customer: { email: '', name: '' },
+      submitting: false,
+      serverError: null,
+      recordId: null
     };
 
     // ============ STEP NAVIGATION ============
@@ -1082,42 +1110,225 @@
 
     // ============ SERVICES GRID ============
     const svcGrid = document.getElementById('svc-grid');
-    TRADE_SERVICES[currentTrade].forEach(svc => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'svc';
-      btn.textContent = svc;
-      btn.setAttribute('aria-pressed', 'false');
-      btn.addEventListener('click', () => {
-        const checked = btn.classList.toggle('checked');
-        btn.setAttribute('aria-pressed', checked ? 'true' : 'false');
-        if (checked) state.servicesNotOffered.add(svc);
-        else state.servicesNotOffered.delete(svc);
+    function buildServicesGrid() {
+      svcGrid.innerHTML = '';
+      state.servicesNotOffered = new Set();
+      (TRADE_SERVICES[currentTrade] || []).forEach(svc => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'svc';
+        btn.textContent = svc;
+        btn.setAttribute('aria-pressed', 'false');
+        btn.addEventListener('click', () => {
+          const checked = btn.classList.toggle('checked');
+          btn.setAttribute('aria-pressed', checked ? 'true' : 'false');
+          if (checked) state.servicesNotOffered.add(svc);
+          else state.servicesNotOffered.delete(svc);
+        });
+        svcGrid.appendChild(btn);
       });
-      svcGrid.appendChild(btn);
+    }
+    buildServicesGrid();
+
+    // Re-point the form to a different trade. Safe to call any time before
+    // the services step — it clears and rebuilds that step's grid.
+    function applyTrade(trade) {
+      if (!TRADE_SERVICES[trade] || trade === currentTrade) return;
+      currentTrade = trade;
+      currentTradeName = TRADE_NAMES[trade];
+      applyTradeLabels();
+      buildServicesGrid();
+      const sel = document.getElementById('trade-select');
+      if (sel) sel.value = trade;
+    }
+
+    // ============ TRADE SELECT ============
+    const tradeSelect = document.getElementById('trade-select');
+    Object.keys(TRADE_NAMES).forEach(slug => {
+      const opt = document.createElement('option');
+      opt.value = slug;
+      const name = TRADE_NAMES[slug];
+      opt.textContent = name.charAt(0).toUpperCase() + name.slice(1);
+      tradeSelect.appendChild(opt);
     });
+    tradeSelect.value = currentTrade;
+    tradeSelect.addEventListener('change', () => applyTrade(tradeSelect.value));
     document.getElementById('svc-other').addEventListener('input', (e) => {
       state.servicesOther = e.target.value;
     });
 
     // ============ SUBMIT ============
-    document.getElementById('submit-btn').addEventListener('click', async () => {
-      const payload = {
-        bizName: state.bizName,
-        logo: state.logo ? { name: state.logo.name, size: state.logo.size, type: state.logo.type } : null,
-        colors: state.colors.filter(Boolean),
-        photos: state.photos.map(p => ({ name: p.name, size: p.size, type: p.type })),
-        servicesNotOffered: Array.from(state.servicesNotOffered),
-        servicesOther: state.servicesOther,
-        submittedAt: new Date().toISOString()
+    const submitBtn = document.getElementById('submit-btn');
+    const submitError = document.getElementById('submit-error');
+    const submitBtnLabel = submitBtn.innerHTML;
+
+    function showSubmitError(message) {
+      submitError.textContent = message;
+      submitError.hidden = false;
+    }
+    function clearSubmitError() {
+      submitError.hidden = true;
+      submitError.textContent = '';
+    }
+    function setSubmitUI(mode, info) {
+      if (mode === 'idle') {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = submitBtnLabel;
+      } else if (mode === 'uploading') {
+        submitBtn.disabled = true;
+        submitBtn.textContent = info && info.total
+          ? `Uploading ${info.i} of ${info.total}…`
+          : 'Uploading…';
+      } else if (mode === 'finalizing') {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Finishing up…';
+      }
+    }
+
+    // Direct browser → Cloudinary upload (unsigned preset). Keeps large photo
+    // batches off our serverless function entirely.
+    async function uploadToCloudinary(file) {
+      const fd = new FormData();
+      fd.append('file', file);
+      fd.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+      fd.append('folder', `hikmon/${state.sessionId || 'no-session'}`);
+      const res = await fetch(
+        `https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD_NAME}/auto/upload`,
+        { method: 'POST', body: fd }
+      );
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        const msg = (data && data.error && data.error.message) || 'upload failed';
+        throw new Error(`${file.name}: ${msg}`);
+      }
+      return {
+        url: data.secure_url,
+        public_id: data.public_id,
+        format: data.format,
+        bytes: data.bytes
       };
-      console.log('[onboarding payload]', payload);
-      // Backend wiring (Cloudinary upload + email + database) comes next phase.
-      goToStep(6);
+    }
+
+    submitBtn.addEventListener('click', async () => {
+      if (state.submitting) return;
+      state.submitting = true;
+      clearSubmitError();
+      setSubmitUI('uploading');
+
+      try {
+        const logo = state.logo ? await uploadToCloudinary(state.logo) : null;
+
+        const photos = [];
+        for (let i = 0; i < state.photos.length; i++) {
+          setSubmitUI('uploading', { i: i + 1, total: state.photos.length });
+          photos.push(await uploadToCloudinary(state.photos[i]));
+        }
+
+        setSubmitUI('finalizing');
+
+        const allServices = TRADE_SERVICES[currentTrade] || [];
+        const excluded = Array.from(state.servicesNotOffered);
+        const targeted = allServices.filter(s => !state.servicesNotOffered.has(s));
+
+        const payload = {
+          sessionId: state.sessionId,
+          plan: state.plan,
+          trade: currentTrade,
+          tradeName: currentTradeName,
+          bizName: state.bizName,
+          colors: state.colors.filter(Boolean),
+          logo,
+          photos,
+          servicesNotOffered: excluded,
+          servicesTargeted: targeted,
+          servicesOther: state.servicesOther,
+          customerEmail: state.customer.email,
+          customerName: state.customer.name,
+          submittedAt: new Date().toISOString()
+        };
+
+        const res = await fetch('/api/onboarding', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) {
+          let msg = 'Something went wrong saving your submission.';
+          try {
+            const errBody = await res.json();
+            if (errBody && errBody.error) msg = errBody.error;
+          } catch (_) { /* keep default */ }
+          throw new Error(msg);
+        }
+
+        const data = await res.json();
+        state.recordId = data.recordId || null;
+
+        const snapshot = document.getElementById('profile-snapshot');
+        if (snapshot && data.profileSnapshotHtml) {
+          snapshot.innerHTML = data.profileSnapshotHtml;
+          snapshot.hidden = false;
+        }
+
+        goToStep(6);
+      } catch (err) {
+        state.serverError = err.message;
+        showSubmitError(
+          `${err.message} — your answers are safe. Try Submit again, or email hello@hikmon.com.`
+        );
+        setSubmitUI('idle');
+      } finally {
+        state.submitting = false;
+      }
     });
+
+    // ============ STRIPE SESSION CONTEXT ============
+    // Non-blocking: personalises the form and locks the trade. On failure the
+    // client can still complete onboarding — we reconcile manually.
+    async function fetchSessionContext() {
+      if (!state.sessionId) {
+        showSessionBanner(
+          "Heads up — I couldn't detect your purchase automatically. " +
+          "Go ahead and fill this out; I'll match it to your payment manually."
+        );
+        return;
+      }
+      try {
+        const res = await fetch(
+          `/api/session-context?session_id=${encodeURIComponent(state.sessionId)}`
+        );
+        if (!res.ok) throw new Error('session lookup failed');
+        const ctx = await res.json();
+        state.plan = ctx.plan || null;
+        state.customer.email = ctx.email || '';
+        state.customer.name = ctx.name || '';
+        if (ctx.trade) applyTrade(ctx.trade);
+        if (ctx.name) {
+          const first = ctx.name.trim().split(/\s+/)[0];
+          const h = document.getElementById('welcome-h');
+          if (h && first) {
+            h.innerHTML = `You're in, ${first}.<br/>Let's get your engine running.`;
+          }
+        }
+      } catch (_) {
+        showSessionBanner(
+          "Heads up — I couldn't verify your purchase just now. " +
+          "Continue anyway; I'll match this to your payment manually."
+        );
+      }
+    }
+
+    function showSessionBanner(message) {
+      const banner = document.getElementById('session-banner');
+      if (!banner) return;
+      banner.textContent = message;
+      banner.hidden = false;
+    }
 
     // ============ INIT ============
     updateProgress();
+    fetchSessionContext();
   </script>
 </body>
 </html>
