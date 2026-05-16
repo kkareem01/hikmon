@@ -270,7 +270,7 @@ function renderClientEmail(args) {
         <div style="border-top:1px solid ${C.hairline};padding-top:22px;">
           <p style="margin:0 0 4px;font-family:${SANS};font-size:15px;color:${C.charcoal};">Building this for you,</p>
           <p style="margin:0;font-family:${SERIF};font-weight:bold;font-size:18px;color:${C.forest};">Kareem</p>
-          <p style="margin:2px 0 0;font-family:${SANS};font-size:14px;color:${C.ash};">Hikmon · <a href="mailto:kareem@hikmon.com" style="color:${C.amber};text-decoration:none;">kareem@hikmon.com</a></p>
+          <p style="margin:2px 0 0;font-family:${SANS};font-size:14px;color:${C.ash};">Hikmon · <a href="mailto:kareem@hikmon.net" style="color:${C.amber};text-decoration:none;">kareem@hikmon.net</a></p>
           <p style="margin:14px 0 0;font-family:${SANS};font-size:13px;line-height:1.5;color:${C.ash};">If anything in your profile above is wrong, just reply to this email &mdash; I read every one.</p>
         </div>
       </td></tr>
@@ -315,7 +315,7 @@ function renderClientEmail(args) {
     '',
     'Building this for you,',
     'Kareem',
-    'Hikmon · kareem@hikmon.com',
+    'Hikmon · kareem@hikmon.net',
     '',
     'If anything in your profile is wrong, just reply to this email.',
   ]

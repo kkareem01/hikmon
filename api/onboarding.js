@@ -140,7 +140,7 @@ module.exports = async (req, res) => {
   } catch (err) {
     // A real Stripe session is required — without it we cannot trust the sale.
     return json(res, 402, {
-      error: 'Could not verify your purchase. Please contact kareem@hikmon.com.',
+      error: 'Could not verify your purchase. Please contact kareem@hikmon.net.',
       detail: err && err.message ? err.message : String(err),
     });
   }
@@ -238,7 +238,7 @@ module.exports = async (req, res) => {
   // ---- Build + send emails ------------------------------------------------
   const { Resend } = require('resend');
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const fromEmail = process.env.FROM_EMAIL || 'kareem@hikmon.com';
+  const fromEmail = process.env.FROM_EMAIL || 'kareem@hikmon.net';
   const from = `Kareem at Hikmon <${fromEmail}>`;
 
   const emailArgs = {
@@ -322,7 +322,7 @@ module.exports = async (req, res) => {
     return json(res, 500, {
       error:
         'We could not save your submission. Your answers are still here — ' +
-        'please try Submit again, or email kareem@hikmon.com.',
+        'please try Submit again, or email kareem@hikmon.net.',
     });
   }
 
