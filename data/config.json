@@ -1,0 +1,19 @@
+{
+  "storeTimezone": "America/New_York",
+  "businessHours": {
+    "sun": null,
+    "mon": { "open": "09:00", "close": "17:00" },
+    "tue": { "open": "09:00", "close": "17:00" },
+    "wed": { "open": "09:00", "close": "17:00" },
+    "thu": { "open": "09:00", "close": "17:00" },
+    "fri": { "open": "09:00", "close": "16:00" },
+    "sat": null
+  },
+  "blackoutDates": [],
+  "defaultSlotDurationMinutes": 30,
+  "fittingTypes": {
+    "strategy": { "label": "Strategy call", "slotDurationMinutes": 30, "buffer": 15 }
+  },
+  "leadTimeMinutes": 240,
+  "maxAdvanceDays": 21
+}

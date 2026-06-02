@@ -20,6 +20,12 @@ temporary screenshots/
 # Env
 .env
 .env.local
+.env.local-dev
+
+# Booking system (local dev artifacts)
+local.db
+local.db-*
+tmp/
 
 # Vercel
 .vercel
