@@ -1,0 +1,34 @@
+/* Shared styles for hikmon.net legal pages (privacy / terms / cookies). */
+:root {
+  --forest:#1F3D2C; --forest-mid:#2D5640; --amber:#C97B19; --amber-glow:#E0913B;
+  --cream:#FAFAF7; --rule:#ECECE7; --ink:#1A1A1A; --muted:#5C5C5C;
+}
+* { box-sizing:border-box; }
+body { margin:0; font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif; color:var(--ink); background:var(--cream); line-height:1.7; -webkit-font-smoothing:antialiased; }
+
+.lg-top { background:var(--forest); color:#fff; padding:14px 20px; display:flex; align-items:center; justify-content:space-between; }
+.lg-brand { font-family:'Source Serif 4',Georgia,serif; font-weight:700; font-size:20px; color:#fff; text-decoration:none; letter-spacing:-0.01em; }
+.lg-brand span { color:var(--amber-glow); }
+.lg-top-cta { font-size:13px; color:rgba(255,255,255,.85); text-decoration:none; }
+.lg-top-cta:hover { color:#fff; }
+
+.lg-wrap { max-width:760px; margin:0 auto; padding:56px 22px 72px; }
+.lg-eyebrow { font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--amber); font-weight:700; }
+.lg-wrap h1 { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:clamp(30px,5vw,42px); line-height:1.1; letter-spacing:-0.025em; color:var(--forest); margin:10px 0 6px; }
+.lg-updated { font-size:13.5px; color:var(--muted); margin:0 0 28px; }
+.lg-intro { font-size:17px; color:var(--ink); margin:0 0 28px; }
+
+.lg-wrap h2 { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:22px; color:var(--forest); letter-spacing:-0.01em; margin:34px 0 8px; }
+.lg-wrap h3 { font-size:16px; font-weight:700; color:var(--forest-mid); margin:20px 0 4px; }
+.lg-wrap p, .lg-wrap li { font-size:15.5px; color:var(--ink); }
+.lg-wrap ul { padding-left:20px; margin:8px 0 16px; }
+.lg-wrap li { margin-bottom:6px; }
+.lg-wrap a { color:var(--amber); text-decoration:none; font-weight:600; }
+.lg-wrap a:hover { text-decoration:underline; }
+.lg-wrap strong { color:var(--forest); }
+
+.lg-note { background:#fff; border:1px solid var(--rule); border-left:3px solid var(--amber); border-radius:10px; padding:14px 18px; margin:24px 0; font-size:14.5px; color:var(--muted); }
+
+.lg-foot { margin-top:44px; padding-top:22px; border-top:1px solid var(--rule); font-size:14px; color:var(--muted); display:flex; flex-wrap:wrap; gap:14px; }
+.lg-foot a { color:var(--amber); text-decoration:none; font-weight:600; }
+.lg-foot a:hover { text-decoration:underline; }
