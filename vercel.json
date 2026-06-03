@@ -7,6 +7,6 @@
   },
   "rewrites": [
     { "source": "/welcome", "destination": "/welcome.html" },
-    { "source": "/pay", "destination": "/pricing.html" }
+    { "source": "/pay", "destination": "/pricing" }
   ]
 }
