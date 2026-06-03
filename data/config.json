@@ -15,5 +15,9 @@
     "strategy": { "label": "Strategy call", "slotDurationMinutes": 30, "buffer": 15 }
   },
   "leadTimeMinutes": 240,
-  "maxAdvanceDays": 21
+  "maxAdvanceDays": 21,
+  "meeting": { "provider": "google-meet" },
+  "salesReps": [
+    { "id": "kareem", "name": "Kareem", "calendarId": "primary" }
+  ]
 }

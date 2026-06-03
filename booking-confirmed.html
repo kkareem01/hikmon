@@ -31,6 +31,9 @@
     .bc-btn { display:inline-flex; align-items:center; justify-content:center; padding:12px 20px; border-radius:9999px; font-weight:700; font-size:14px; text-decoration:none; transition:transform .15s, background .15s; }
     .bc-btn-amber { background:var(--amber); color:#fff; box-shadow:0 8px 20px -10px rgba(201,123,25,.6); }
     .bc-btn-amber:hover { transform:translateY(-1px); background:var(--amber-glow); }
+    .bc-btn-forest { background:var(--forest); color:#fff; box-shadow:0 8px 20px -10px rgba(31,61,44,.6); }
+    .bc-btn-forest:hover { transform:translateY(-1px); background:var(--forest-mid); }
+    .bc-btn[hidden] { display:none; }
     .bc-btn-ghost { background:#fff; color:var(--ink); border:1px solid var(--rule); }
     .bc-next { margin-top:30px; }
     .bc-next h2 { font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:20px; color:var(--forest); margin:0 0 12px; }
@@ -52,10 +55,11 @@
     <div class="bc-card">
       <dl data-region="summary">
         <dt>When</dt><dd>—</dd>
-        <dt>Where</dt><dd>Phone call — I'll call you</dd>
+        <dt>Where</dt><dd>—</dd>
         <dt>Reference</dt><dd>—</dd>
       </dl>
       <div class="bc-actions">
+        <a class="bc-btn bc-btn-forest" data-region="join-link" href="#" target="_blank" rel="noopener" hidden>Join the Google Meet call →</a>
         <a class="bc-btn bc-btn-amber" data-region="ics-link" href="#" download>Add to calendar</a>
         <a class="bc-btn bc-btn-ghost" href="mailto:kareem@hikmon.net">Reschedule / question</a>
       </div>

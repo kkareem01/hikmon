@@ -79,14 +79,30 @@
     const ref = document.querySelector('[data-region="reference"]');
     if (ref) ref.textContent = `Reference: ${b.id}`;
 
+    const meetUrl = typeof b.meetUrl === 'string' && b.meetUrl ? b.meetUrl : null;
+    const where = meetUrl
+      ? `<a href="${escapeHtml(meetUrl)}" style="color:var(--amber);font-weight:600;">Google Meet (video) — join link below</a>`
+      : "Phone call — I'll call you";
+
     const summary = document.querySelector('[data-region="summary"]');
     if (summary) {
       summary.innerHTML = `
         <dt>When</dt><dd>${escapeHtml(dateLong)} at ${escapeHtml(time12)} <span class="bc-tz">(${escapeHtml(userTz)})</span></dd>
         <dt>How long</dt><dd>${b.slot.durationMinutes} minutes</dd>
-        <dt>Where</dt><dd>Phone call — I'll call you</dd>
+        <dt>Where</dt><dd>${where}</dd>
         <dt>Reference</dt><dd>${escapeHtml(b.id)}</dd>
       `;
+    }
+
+    // Surface the Meet link as a primary action button when present.
+    const joinBtn = document.querySelector('[data-region="join-link"]');
+    if (joinBtn) {
+      if (meetUrl) {
+        joinBtn.href = meetUrl;
+        joinBtn.hidden = false;
+      } else {
+        joinBtn.hidden = true;
+      }
     }
 
     const ics = document.querySelector('[data-region="ics-link"]');
