@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SMS Lead-Alert Consent &amp; Opt-In · Hikmon</title>
+  <meta name="description" content="How Hikmon business-owner clients opt in to receive lead-alert text messages, what those messages contain, message frequency, and how to opt out." />
+  <link rel="canonical" href="https://www.hikmon.net/sms-consent" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/legal.css" />
+  <style>
+    /* Page-specific styles, built on the shared legal palette */
+    .sms-lede { display:grid; gap:26px; grid-template-columns:1fr; align-items:center; margin:8px 0 36px; }
+    @media (min-width:720px){ .sms-lede{ grid-template-columns:1.15fr .85fr; gap:34px; } }
+
+    /* Sample-message phone card */
+    .sms-phone { background:linear-gradient(168deg,#16241d,#0b1410); border-radius:26px; padding:10px;
+      box-shadow:0 30px 60px -34px rgba(11,20,16,.7), 0 8px 20px -12px rgba(31,61,44,.4); max-width:300px; margin:0 auto; }
+    .sms-screen { background:radial-gradient(120% 80% at 50% 0%, rgba(201,123,25,.16), transparent 55%), #0d1712;
+      border-radius:18px; padding:16px 14px 20px; }
+    .sms-meta { display:flex; align-items:center; justify-content:space-between; font-size:11px; color:rgba(255,255,255,.5); padding:0 2px 12px; }
+    .sms-from { display:flex; align-items:center; gap:9px; padding:0 2px 12px; }
+    .sms-dot { width:30px; height:30px; border-radius:9px; background:linear-gradient(145deg,#E0913B,#C97B19);
+      display:grid; place-items:center; font-family:'Source Serif 4',serif; font-weight:700; color:#1a120a; font-size:15px; }
+    .sms-from b { color:#fff; font-size:13px; display:block; line-height:1.3; }
+    .sms-from span { color:rgba(255,255,255,.45); font-size:11px; }
+    .sms-bubble { background:linear-gradient(160deg,#E0913B,#C97B19); color:#1c1207; border-radius:16px; border-top-left-radius:5px;
+      padding:11px 14px; font-size:13px; line-height:1.5; max-width:90%; box-shadow:0 10px 22px -12px rgba(201,123,25,.6); }
+    .sms-bubble b { color:#1c1207; }
+    .sms-bubble .row { color:#241a0e; opacity:.92; }
+    .sms-help { color:rgba(255,255,255,.42); font-size:11px; margin:11px 2px 0; }
+    .sms-help b { color:rgba(255,255,255,.7); }
+
+    /* Numbered step cards */
+    .sms-steps { display:grid; gap:14px; grid-template-columns:1fr; margin:8px 0 8px; }
+    @media (min-width:680px){ .sms-steps{ grid-template-columns:repeat(3,1fr); } }
+    .sms-card { background:#fff; border:1px solid var(--rule); border-radius:12px; padding:20px 18px;
+      box-shadow:0 14px 30px -24px rgba(31,61,44,.4); }
+    .sms-card .num { font-family:'Source Serif 4',serif; font-weight:700; font-size:26px; color:var(--amber); }
+    .sms-card h3 { font-family:'Source Serif 4',serif; font-weight:600; font-size:17px; color:var(--forest); margin:8px 0 6px; }
+    .sms-card p { font-size:14.5px; color:var(--muted); margin:0; line-height:1.6; }
+    .sms-card strong { color:var(--forest); }
+
+    /* Program-details table */
+    .sms-facts { width:100%; border-collapse:collapse; background:#fff; border:1px solid var(--rule); border-radius:12px; overflow:hidden; margin:14px 0 8px; }
+    .sms-facts th, .sms-facts td { text-align:left; padding:13px 16px; font-size:14.5px; vertical-align:top; border-bottom:1px solid var(--rule); }
+    .sms-facts tr:last-child th, .sms-facts tr:last-child td { border-bottom:0; }
+    .sms-facts th { width:150px; color:var(--forest); font-weight:700; background:#FBFBF8; }
+    .sms-facts td { color:var(--ink); }
+
+    /* Opt-in form */
+    .sms-form { background:#fff; border:1px solid var(--rule); border-radius:14px; padding:26px 22px; margin:14px 0 8px;
+      box-shadow:0 18px 40px -30px rgba(31,61,44,.45); }
+    .sms-row { display:grid; gap:16px; grid-template-columns:1fr; }
+    @media (min-width:560px){ .sms-grid2{ grid-template-columns:1fr 1fr; } }
+    .sms-field { display:grid; gap:6px; font-size:13.5px; font-weight:600; color:var(--forest); margin-bottom:16px; }
+    .sms-field input[type=text], .sms-field input[type=tel] { font:inherit; font-weight:400; font-size:15px; color:var(--ink);
+      border:1px solid var(--rule); border-radius:9px; padding:11px 13px; background:#fff; transition:border-color .15s, box-shadow .15s; }
+    .sms-field input:focus { outline:none; border-color:var(--amber); box-shadow:0 0 0 3px rgba(201,123,25,.16); }
+    .sms-consent { display:flex; gap:12px; align-items:flex-start; background:var(--cream); border:1px solid var(--rule);
+      border-radius:10px; padding:14px; margin:4px 0 18px; }
+    .sms-consent input { width:20px; height:20px; margin:2px 0 0; accent-color:var(--amber); flex:0 0 auto; }
+    .sms-consent label { font-size:13.5px; color:var(--muted); line-height:1.6; font-weight:400; }
+    .sms-consent label strong { color:var(--forest); font-weight:700; }
+    .sms-consent label a { color:var(--amber); font-weight:600; text-decoration:none; }
+    .sms-consent label a:hover { text-decoration:underline; }
+    .sms-btn { width:100%; border:0; cursor:pointer; font:inherit; font-weight:700; font-size:15px; color:#fff;
+      background:linear-gradient(160deg,#E0913B,#C97B19); border-radius:10px; padding:14px; letter-spacing:.01em;
+      box-shadow:0 12px 26px -12px rgba(201,123,25,.6); transition:transform .15s, box-shadow .2s; }
+    .sms-btn:hover { transform:translateY(-2px); }
+    .sms-btn:active { transform:translateY(0); }
+    .sms-btn:focus-visible { outline:3px solid rgba(201,123,25,.5); outline-offset:3px; }
+    .sms-msg { display:none; margin-top:14px; text-align:center; font-size:14px; font-weight:600; border-radius:10px; padding:12px 14px; }
+    .sms-msg.ok { display:block; color:var(--forest); background:rgba(45,86,64,.1); border:1px solid rgba(45,86,64,.25); }
+    .sms-msg.err { display:block; color:#9a3412; background:rgba(201,123,25,.1); border:1px solid rgba(201,123,25,.3); }
+  </style>
+</head>
+<body>
+  <header class="lg-top">
+    <a href="/" class="lg-brand">Hik<span>mon</span></a>
+    <a href="/booking" class="lg-top-cta">Book a free strategy call →</a>
+  </header>
+
+  <main class="lg-wrap">
+    <p class="lg-eyebrow">SMS Program · Proof of Consent</p>
+    <h1>Lead-alert text messages</h1>
+    <p class="lg-updated">Last updated: June 7, 2026</p>
+
+    <div class="sms-lede">
+      <div>
+        <p class="lg-intro" style="margin-bottom:14px">Hikmon builds and manages websites for local home-service businesses. When a new customer submits a lead on one of those websites, the <strong>business owner</strong> can choose to get an instant text message so they never miss a job.</p>
+        <p style="font-size:15.5px;margin:0">This page documents exactly how owners opt in, what they receive, how often, and how they stop. Owners are our own clients — we never message the general public, and we never use purchased or imported lists.</p>
+      </div>
+
+      <div class="sms-phone" aria-hidden="true">
+        <div class="sms-screen">
+          <div class="sms-meta"><span style="font-weight:600">9:41</span><span>Messages</span><span style="font-weight:600">5G</span></div>
+          <div class="sms-from">
+            <span class="sms-dot">H</span>
+            <span><b>Hikmon Lead Alert</b><span>SMS · now</span></span>
+          </div>
+          <div class="sms-bubble">
+            <b>🔔 New lead — Eddie's Heating &amp; Air</b><br />
+            <span class="row">Maria G. · (470) 555‑0148<br />“AC not cooling, need it today.” · Lilburn, GA</span>
+          </div>
+          <p class="sms-help">Reply <b>STOP</b> to unsubscribe · <b>HELP</b> for help</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>How owners opt in</h2>
+    <div class="sms-steps">
+      <div class="sms-card">
+        <div class="num">01</div>
+        <h3>Who opts in</h3>
+        <p>Only the <strong>owner or staff</strong> of a business Hikmon builds a website for. These are our own clients — never the general public, and never purchased lists.</p>
+      </div>
+      <div class="sms-card">
+        <div class="num">02</div>
+        <h3>How they opt in</h3>
+        <p>During onboarding, the owner enters their own mobile number and <strong>checks an explicit consent box</strong> on the form below (or on their account setup page). Consent is express, written, and unchecked by default.</p>
+      </div>
+      <div class="sms-card">
+        <div class="num">03</div>
+        <h3>What they receive</h3>
+        <p>Transactional <strong>lead-alert notifications only</strong> — triggered when a customer submits a form on their website. No marketing, no promotions, no third-party content.</p>
+      </div>
+    </div>
+
+    <h2>Program details</h2>
+    <table class="sms-facts">
+      <tbody>
+        <tr><th>Program</th><td>Hikmon Lead Alerts — an instant SMS when a customer submits a lead form on the owner's website.</td></tr>
+        <tr><th>Message type</th><td>Transactional / notification. No promotional or marketing messages.</td></tr>
+        <tr><th>Frequency</th><td>Recurring — one message per lead received. Volume depends on the owner's own leads.</td></tr>
+        <tr><th>Cost</th><td>Message &amp; data rates may apply, per the recipient's mobile carrier plan.</td></tr>
+        <tr><th>Opt out</th><td>Reply <strong>STOP</strong> at any time to unsubscribe. Reply <strong>HELP</strong> for help.</td></tr>
+        <tr><th>Support</th><td>Email <a href="mailto:kareem@hikmon.net">kareem@hikmon.net</a> with any questions about this program.</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="opt-in">Business owner opt-in</h2>
+    <p>Enter your details and check the box to give consent. This is the exact consent language and mechanism Hikmon uses to enroll owners in lead-alert texts.</p>
+
+    <form class="sms-form" id="consentForm" novalidate>
+      <div class="sms-row sms-grid2">
+        <div class="sms-field">Your name
+          <input type="text" name="name" autocomplete="name" placeholder="Jane Owner" required />
+        </div>
+        <div class="sms-field">Business name
+          <input type="text" name="business" autocomplete="organization" placeholder="Eddie's Heating &amp; Air" required />
+        </div>
+      </div>
+      <div class="sms-field">Mobile number
+        <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="(470) 555-0148" required />
+      </div>
+
+      <div class="sms-consent">
+        <input type="checkbox" id="consent" name="consent" required />
+        <label for="consent">I agree to receive recurring lead-alert text messages from Hikmon at the number provided. These are automated notifications sent when a customer submits a lead on my website. Consent is not a condition of any purchase. Message &amp; data rates may apply. Reply <strong>STOP</strong> to cancel or <strong>HELP</strong> for help. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms</a>.</label>
+      </div>
+
+      <button type="submit" class="sms-btn">Confirm opt-in</button>
+      <p class="sms-msg" id="formMsg" role="status"></p>
+    </form>
+
+    <h2>Privacy &amp; data use</h2>
+    <p>Mobile numbers collected for Hikmon Lead Alerts are used <strong>solely</strong> to deliver the lead-alert notifications described above. We do not sell, rent, or share mobile information or consent with third parties for marketing or promotional purposes. No mobile opt-in data is shared with anyone except the SMS provider strictly to transmit the messages. Owners can revoke consent at any time by replying STOP or emailing <a href="mailto:kareem@hikmon.net">kareem@hikmon.net</a>. For full details, see our <a href="/privacy">Privacy Policy</a>.</p>
+
+    <div class="lg-foot">
+      <a href="/">← hikmon.net</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms of Service</a><a href="/cookies">Cookie Policy</a>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var form = document.getElementById('consentForm');
+      var msg = document.getElementById('formMsg');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var consent = document.getElementById('consent');
+        if (!form.checkValidity() || !consent.checked) {
+          msg.className = 'sms-msg err';
+          msg.textContent = 'Please complete all fields and check the consent box to opt in.';
+          return;
+        }
+        msg.className = 'sms-msg ok';
+        msg.textContent = "You're opted in. We'll text lead alerts to the number you provided. Reply STOP anytime.";
+        form.reset();
+      });
+    })();
+  </script>
+</body>
+</html>
