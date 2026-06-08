@@ -396,8 +396,8 @@ function buildSwaps(slug, t) {
       `<title>Hikmon — Top 3 on Google Maps in 30 days for residential ${t.titleNoun}, or every month after is free</title>`,
     ],
     [
-      `<meta name="description" content="The Demand Capture Engine for residential HVAC owners. $397 / 4 weeks, or $3,564 upfront for the year (save $1,200). No setup fee. Top 3 on Google in 30 days, or every month after is free until you rank." />`,
-      `<meta name="description" content="The Demand Capture Engine for ${t.metaOwnerDesc}. $397 / 4 weeks, or $3,564 upfront for the year (save $1,200). No setup fee. Top 3 on Google in 30 days, or every month after is free until you rank." />`,
+      `<meta name="description" content="The A-List Celebrity System™ for residential HVAC owners. $397 / 4 weeks, or $3,564 upfront for the year (save $1,200). No setup fee. Top 3 on Google in 30 days, or every month after is free until you rank." />`,
+      `<meta name="description" content="The A-List Celebrity System™ for ${t.metaOwnerDesc}. $397 / 4 weeks, or $3,564 upfront for the year (save $1,200). No setup fee. Top 3 on Google in 30 days, or every month after is free until you rank." />`,
     ],
     [
       `<link rel="canonical" href="https://hikmon.com/hvac.html" />`,
@@ -544,8 +544,8 @@ function buildSwaps(slug, t) {
 
     // === FOOTER ===
     [
-      `The Demand Capture Engine for residential HVAC owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`,
-      `The Demand Capture Engine for ${t.footerDesc}. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`,
+      `The A-List Celebrity System™ for residential HVAC owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`,
+      `The A-List Celebrity System™ for ${t.footerDesc}. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`,
     ],
     [
       `BUILT FOR HVAC · OWNED, NOT RENTED`,

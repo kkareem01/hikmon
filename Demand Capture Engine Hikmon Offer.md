@@ -2,7 +2,7 @@
 
 ## 1. CATEGORY CREATION
 
-> **Your Category:** Demand Capture Engine
+> **Your Category:** A-List Celebrity System™
 > 
 > 
 > **Category One-Liner:** Hikmon transforms your Google Business Profile and your website into an asset you actually own so you stop renting calls from Angi, Yelp, and bloated agencies, and generate booked calls even in the slow season.
@@ -14,12 +14,12 @@
 
 ## 2. THE UNIQUE MECHANISM
 
-> **Mechanism Name:** **The Demand Capture Engine™**
+> **Mechanism Name:** **The A-List Celebrity System™**
 > 
 > 
 > **Mechanism Description (internal use):** A two-asset system — a conversion-rate-optimized trade-specific website + a fully indexed Google Business Profile (30 services, full category coverage, automated posts and review responses).
 > 
-> **Mechanism Pitch (external — what you actually say):** "We use a system called the Demand Capture Engine — it's how we get a home service business top 3 on Google in under 30 days without a $10K website fee or a 12-month contract. I'll show you a free demo of what your version looks like before you commit a dollar."
+> **Mechanism Pitch (external — what you actually say):** "We use a system called the A-List Celebrity System™ — it's how we get a home service business top 3 on Google in under 30 days without a $10K website fee or a 12-month contract. I'll show you a free demo of what your version looks like before you commit a dollar."
 > 
 
 ---
@@ -51,7 +51,7 @@
 
 **The Bridge Line:**
 
-> The reason your last agency didn't work isn't because SEO doesn't work — it's because their pricing assumed you had a SaaS company's cash flow, not a home service business's. The Demand Capture Engine is the first system priced like a home service owner actually runs their business: low monthly, no setup, results in 30 days, or we work for free.
+> The reason your last agency didn't work isn't because SEO doesn't work — it's because their pricing assumed you had a SaaS company's cash flow, not a home service business's. The A-List Celebrity System™ is the first system priced like a home service owner actually runs their business: low monthly, no setup, results in 30 days, or we work for free.
 > 
 
 ---
@@ -95,7 +95,7 @@
 
 **Core Promise:**
 
-> "In 30 days or less, we will rank your home service business top 3 on Google for your highest-value local searches using the Demand Capture Engine — or we work free until you are. No setup fee. No long contract."
+> "In 30 days or less, we will rank your home service business top 3 on Google for your highest-value local searches using the A-List Celebrity System™ — or we work free until you are. No setup fee. No long contract."
 > 
 
 **What's Included (deliverables reframed as outcomes):**
@@ -177,9 +177,9 @@
 
 ## 8. THE ONE-LINER
 
-> **Your One-Liner (broad):** **"I help residential home service owners rank top 3 on Google Maps in 30 days using the Demand Capture Engine — for $297 / 4 weeks, no setup fee, or we work free until you're there."**
+> **Your One-Liner (broad):** **"I help residential home service owners rank top 3 on Google Maps in 30 days using the A-List Celebrity System™ — for $297 / 4 weeks, no setup fee, or we work free until you're there."**
 > 
-> **Your One-Liner (HVAC ad creative):** **"I help residential HVAC owners rank top 3 on Google Maps in 30 days using the Demand Capture Engine — for $297 / 4 weeks, no setup fee, or we work free until you're there."**
+> **Your One-Liner (HVAC ad creative):** **"I help residential HVAC owners rank top 3 on Google Maps in 30 days using the A-List Celebrity System™ — for $297 / 4 weeks, no setup fee, or we work free until you're there."**
 > 
 
 **Three headline variations for cold outreach / DMs / ad hooks (HVAC creative; substitute the trade noun for other verticals):**
@@ -224,8 +224,8 @@
 
 `HIKMON OFFER SUMMARY
 ---------------------------------------
-Category:     Demand Capture Engineering
-Mechanism:    The Demand Capture Engine™
+Category:     A-List Celebrity System™ering
+Mechanism:    The A-List Celebrity System™
 Promise:      Top 3 on Google Maps in 30 days
 Timeframe:    30 days
 Price:        $397 / 4 weeks monthly, or $3,564 upfront for 1 year ($297/4wk equivalent, saves $1,200)
@@ -240,5 +240,5 @@ ICP:          Owner-led residential home service business
               <$1M revenue, 1-5 trucks
 One-Liner:    "I help residential home service owners rank
               top 3 on Google Maps in 30 days using
-              the Demand Capture Engine or we work free until you do."
+              the A-List Celebrity System™ or we work free until you do."
 ---------------------------------------`

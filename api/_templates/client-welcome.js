@@ -277,7 +277,7 @@ function renderClientEmail(args) {
 
       <!-- Footer -->
       <tr><td style="background:${C.elevated};border-radius:0 0 12px 12px;padding:18px 28px;text-align:center;font-family:${SANS};font-size:12px;color:${C.ash};">
-        Hikmon &middot; Demand Capture Engine for home service businesses
+        Hikmon &middot; A-List Celebrity System™ for home service businesses
       </td></tr>
 
     </table>

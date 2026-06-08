@@ -83,11 +83,11 @@ Three-font system: serif headline signals **authority and permanence** (the esta
 
 <!-- Body lead -->
 <p style="font-family: 'Inter', sans-serif; font-size: 19px; line-height: 1.7; color: var(--charcoal);">
-  We install The Demand Capture Engine for home service businesses…
+  We install The A-List Celebrity System™ for home service businesses…
 </p>
 
 <!-- Eyebrow -->
 <span style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--amber-rich);">
-  THE DEMAND CAPTURE ENGINE
+  THE A-LIST CELEBRITY SYSTEM™
 </span>
 ```

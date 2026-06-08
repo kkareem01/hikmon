@@ -14,7 +14,7 @@ Canonical per-trade copy for the 12 trade landing pages. Edit copy **here first*
 **Hero H1** (lines 1620–1621 in source):
 > Get top 3 on Google in 30 days, or we work for free until you do.
 
-**Eyebrow** (line 1615): `The Demand Capture Engine`
+**Eyebrow** (line 1615): `The A-List Celebrity System™`
 
 **Hero CTA**: `Get my free demo site`
 
@@ -79,7 +79,7 @@ Canonical per-trade copy for the 12 trade landing pages. Edit copy **here first*
 | `faq-4-answer` | 2168 | "We help every home service trade — A, B, C..." (rotate to omit current trade) |
 | `guarantee-body-search` | 2231 | "your primary X search" |
 | `final-cta-body` | 2257 | "your X website" |
-| `footer-description` | 2297 | "The Demand Capture Engine for residential X owners." |
+| `footer-description` | 2297 | "The A-List Celebrity System™ for residential X owners." |
 | `footer-tagline` | 2343 | "BUILT FOR X" |
 
 Also per trade but separate from the HTML markers:
@@ -105,7 +105,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential HVAC, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential HVAC owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential HVAC owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `HVAC repair near me`
@@ -171,7 +171,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your HVAC website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential HVAC owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential HVAC owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR HVAC · OWNED, NOT RENTED`
@@ -207,7 +207,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential plumbing, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential plumbing owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential plumbing owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `emergency plumber near me`
@@ -273,7 +273,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your plumbing website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential plumbing owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential plumbing owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR PLUMBING · OWNED, NOT RENTED`
@@ -309,7 +309,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential electrical, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential electrical contractors. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential electrical contractors. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `electrician near me`
@@ -375,7 +375,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your electrical website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential electrical contractors. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential electrical contractors. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR ELECTRICAL · OWNED, NOT RENTED`
@@ -411,7 +411,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential roofing, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential roofing owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential roofing owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `roofers near me`
@@ -477,7 +477,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your roofing website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential roofing owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential roofing owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR ROOFING · OWNED, NOT RENTED`
@@ -513,7 +513,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential garage doors, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential garage door owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential garage door owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `garage door repair near me`
@@ -579,7 +579,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your garage door website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential garage door owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential garage door owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR GARAGE DOORS · OWNED, NOT RENTED`
@@ -615,7 +615,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential pest control, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential pest control owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential pest control owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `exterminator near me`
@@ -681,7 +681,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your pest control website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential pest control owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential pest control owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR PEST CONTROL · OWNED, NOT RENTED`
@@ -717,7 +717,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential landscaping, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential landscaping owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential landscaping owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `landscaper near me`
@@ -783,7 +783,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your landscaping website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential landscaping owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential landscaping owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR LANDSCAPING · OWNED, NOT RENTED`
@@ -819,7 +819,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential pool service, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential pool service owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential pool service owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `pool service near me`
@@ -885,7 +885,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your pool service website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential pool service owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential pool service owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR POOL SERVICE · OWNED, NOT RENTED`
@@ -921,7 +921,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential cleaning, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential cleaning owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential cleaning owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `house cleaning near me`
@@ -987,7 +987,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your cleaning website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential cleaning owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential cleaning owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR CLEANING · OWNED, NOT RENTED`
@@ -1023,7 +1023,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential painting, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential painting owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential painting owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `painters near me`
@@ -1089,7 +1089,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your painting website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential painting owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential painting owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR PAINTING · OWNED, NOT RENTED`
@@ -1125,7 +1125,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential handyman work, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential handyman businesses. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential handyman businesses. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `handyman near me`
@@ -1191,7 +1191,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your handyman website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential handyman businesses. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential handyman businesses. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR HANDYMAN · OWNED, NOT RENTED`
@@ -1227,7 +1227,7 @@ Also per trade but separate from the HTML markers:
 `Hikmon — Top 3 on Google Maps in 30 days for residential flooring, or every month after is free`
 
 ### meta-description
-`The Demand Capture Engine for residential flooring owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
+`The A-List Celebrity System™ for residential flooring owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
 
 ### hero-subhead-query
 `flooring installer near me`
@@ -1293,7 +1293,7 @@ Also per trade but separate from the HTML markers:
 `We build a real, working demo of your flooring website — free, before you pay a dollar. If it doesn't beat what you have today, you walk away with the demo. No pressure.`
 
 ### footer-description
-`The Demand Capture Engine for residential flooring owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
+`The A-List Celebrity System™ for residential flooring owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.`
 
 ### footer-tagline
 `BUILT FOR FLOORING · OWNED, NOT RENTED`
