@@ -21,10 +21,11 @@ You're generating **3 secrets** to put in Vercel:
 1. **APIs & Services → OAuth consent screen** → User type **External** → fill app name
    ("Hikmon"), your support email, developer email → Save.
 2. **Scopes**: add `https://www.googleapis.com/auth/calendar.events` → Save.
-3. **Test users**: add the Google account whose calendar the calls should book onto
-   (your kareem@hikmon.net Google account). Save.
-   - You can leave the app in "Testing" mode — a refresh token from a test user works
-     indefinitely for your own account.
+3. **Publishing status**: set the app to **In production** (Audience tab → Publish app).
+   - IMPORTANT: in "Testing" mode Google expires the refresh token after **7 days**, so
+     Meet links would stop generating weekly. "In production" gives a non-expiring token.
+   - The app stays *unverified* (fine for your own use) — at the consent screen click
+     **Advanced → Go to <app> (unsafe)**. Verification is only needed for outside users.
 
 ### 3. Create an OAuth client → get Client ID + Secret
 1. **APIs & Services → Credentials → Create Credentials → OAuth client ID**.

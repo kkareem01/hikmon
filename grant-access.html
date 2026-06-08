@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Connect your Google Business Profile — Local Service Marketers</title>
+  <meta name="description" content="Add Local Service Marketers as a manager on your Google Business Profile." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://localservicemarketers.com/grant-access" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['"Hanken Grotesk"', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            ink: '#11201A',
+            surface: '#16241D',
+            elevated: '#1A2C23',
+            cream: '#F4F1E9',
+            'cream-soft': '#9DA79C',
+            'cream-faint': '#6B7670',
+            amber: '#E0A94E',
+            'amber-deep': '#C4892F',
+            'amber-light': '#F0C97A',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    :root {
+      --ink: #11201A;
+      --cream: #F4F1E9;
+      --cream-soft: #9DA79C;
+      --amber: #E0A94E;
+      --line: rgba(244, 241, 233, 0.12);
+      --line-strong: rgba(244, 241, 233, 0.20);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      background-color: var(--ink);
+      color: var(--cream);
+      background-image:
+        radial-gradient(55% 45% at 84% -6%, rgba(224, 169, 78, 0.14), transparent 60%),
+        radial-gradient(60% 50% at 50% 116%, rgba(19, 110, 71, 0.18), transparent 62%);
+      background-attachment: fixed;
+    }
+
+    .grain::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0.5;
+      mix-blend-mode: soft-light;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+    }
+
+    .display-tight { letter-spacing: -0.03em; line-height: 1.02; }
+
+    .card {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 45%),
+        #16241D;
+      border: 1px solid var(--line);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.04) inset, 0 30px 70px -38px rgba(0,0,0,0.8);
+    }
+
+    .mark {
+      display: inline-grid; place-items: center;
+      width: 36px; height: 36px; border-radius: 11px;
+      background: linear-gradient(145deg, #F0C97A, #C4892F);
+      box-shadow: 0 6px 18px -6px rgba(224, 169, 78, 0.5), 0 1px 0 rgba(255,255,255,0.4) inset;
+    }
+    .mark span { font-family: 'Fraunces', serif; font-weight: 600; color: #14211a; font-size: 20px; line-height: 1; }
+
+    .step {
+      display: grid; place-items: center; flex-shrink: 0;
+      width: 26px; height: 26px; border-radius: 999px;
+      font-family: 'Fraunces', serif; font-weight: 600; font-size: 13px;
+      color: #14211a;
+      background: linear-gradient(150deg, #F0C97A, #C4892F);
+      box-shadow: 0 5px 14px -7px rgba(224,169,78,0.7);
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .rise { opacity: 0; animation: rise 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+    .d1 { animation-delay: 0.05s; } .d2 { animation-delay: 0.14s; } .d3 { animation-delay: 0.23s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rise { animation: none; opacity: 1; }
+      html { scroll-behavior: auto; }
+    }
+
+    .field {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--line-strong);
+      border-radius: 12px;
+      color: var(--cream);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+    .field::placeholder { color: #5F6A63; }
+    .field:focus {
+      outline: none;
+      border-color: var(--amber);
+      background: rgba(255,255,255,0.05);
+      box-shadow: 0 0 0 4px rgba(224, 169, 78, 0.16);
+    }
+    textarea.field { resize: vertical; min-height: 84px; }
+
+    .btn-amber {
+      width: 100%;
+      background: linear-gradient(160deg, #F0C97A, #C4892F);
+      color: #14211a;
+      box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 16px 34px -14px rgba(224, 169, 78, 0.55);
+      transition: transform 0.15s cubic-bezier(0.16,1,0.3,1), box-shadow 0.2s ease;
+    }
+    .btn-amber:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.35) inset, 0 20px 40px -14px rgba(224, 169, 78, 0.65); }
+    .btn-amber:active { transform: translateY(0); }
+    .btn-amber:focus-visible { outline: 3px solid rgba(224,169,78,0.55); outline-offset: 3px; }
+    .btn-amber:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
+    .btn-ghost {
+      width: 100%;
+      border: 1px solid var(--line-strong);
+      background: rgba(255,255,255,0.02);
+      color: var(--cream);
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    }
+    .btn-ghost:hover { background: rgba(255,255,255,0.05); border-color: var(--amber); }
+    .btn-ghost:active { transform: translateY(1px); }
+    .btn-ghost:focus-visible { outline: 3px solid rgba(224,169,78,0.45); outline-offset: 3px; }
+    .btn-ghost:disabled { opacity: 0.6; cursor: not-allowed; }
+
+    .copybox {
+      background: rgba(224, 169, 78, 0.08);
+      border: 1px solid rgba(224, 169, 78, 0.3);
+      border-radius: 14px;
+    }
+    .btn-copy {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line-strong);
+      color: var(--cream);
+      transition: background 0.18s ease, border-color 0.18s ease;
+    }
+    .btn-copy:hover { background: rgba(255,255,255,0.12); border-color: var(--amber); }
+
+    a.link { color: var(--amber-light); text-underline-offset: 3px; }
+    a.link:hover { text-decoration: underline; }
+
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    details[open] .chev { transform: rotate(180deg); }
+    .chev { transition: transform 0.25s ease; }
+  </style>
+</head>
+
+<body class="grain font-sans antialiased selection:bg-amber/25">
+  <div class="relative z-[2] min-h-screen flex flex-col">
+
+    <!-- minimal top bar: identity + where you are -->
+    <header class="max-w-xl w-full mx-auto px-5 sm:px-6 pt-7 flex items-center justify-between">
+      <a href="https://localservicemarketers.com" class="flex items-center gap-2.5 rise d1">
+        <span class="mark"><span>H</span></span>
+        <span class="font-display text-xl font-semibold tracking-tight">Local Service Marketers</span>
+      </a>
+      <span class="rise d1 text-xs font-semibold text-cream-faint">Step 2 of 3</span>
+    </header>
+
+    <!-- the task -->
+    <main class="flex-1 flex items-center">
+      <section class="max-w-xl w-full mx-auto px-5 sm:px-6 py-12">
+        <div class="card rounded-3xl p-7 sm:p-9 rise d2">
+
+          <h1 class="font-display font-semibold display-tight text-2xl sm:text-3xl text-center">
+            Add us to your Google Business Profile
+          </h1>
+          <p class="text-center text-cream-soft text-sm mt-2.5">
+            Two minutes in your profile. Add the email below as a <strong class="text-cream font-semibold">Manager</strong> — we take it from there.
+          </p>
+
+          <!-- the one thing they need: the email -->
+          <div class="copybox mt-6 p-4 flex items-center justify-between gap-3">
+            <div class="min-w-0">
+              <p class="text-[0.68rem] uppercase tracking-[0.18em] text-amber font-semibold">Add as Manager</p>
+              <code id="mgrEmail" class="block text-amber-light text-lg sm:text-xl font-semibold truncate mt-0.5">Kareem@hikmon.net</code>
+            </div>
+            <button id="copyEmail" type="button" class="btn-copy text-sm font-semibold px-4 py-2.5 rounded-lg shrink-0">Copy</button>
+          </div>
+
+          <!-- the steps -->
+          <ol class="mt-6 grid gap-3.5 text-[0.95rem] text-cream-soft leading-relaxed">
+            <li class="flex gap-3"><span class="step">1</span><span>Sign in to Google and search your business name — or open <a class="link" href="https://business.google.com" target="_blank" rel="noopener">business.google.com</a>.</span></li>
+            <li class="flex gap-3"><span class="step">2</span><span>Tap the <strong class="text-cream font-semibold">three dots (⋮)</strong> on your profile, then <strong class="text-cream font-semibold">Business Profile settings → People &amp; access</strong>.</span></li>
+            <li class="flex gap-3"><span class="step">3</span><span>Tap <strong class="text-cream font-semibold">Add</strong>, paste our email, set the role to <strong class="text-cream font-semibold">Manager</strong>.</span></li>
+            <li class="flex gap-3"><span class="step">4</span><span>Send the invite. We accept within a few hours — then you're done.</span></li>
+          </ol>
+
+          <!-- confirm so we can watch for the invite -->
+          <form id="confirmForm" class="mt-7 pt-6 border-t border-[var(--line)] grid gap-4" novalidate>
+            <p class="text-sm font-semibold">Added us? Tell us so we catch the invite fast.</p>
+            <div data-fields class="grid gap-4">
+              <div class="grid sm:grid-cols-2 gap-4">
+                <input required name="business" type="text" autocomplete="organization" placeholder="Business name" class="field px-4 py-3 text-base" />
+                <input required name="email" type="email" autocomplete="email" inputmode="email" placeholder="Your email" class="field px-4 py-3 text-base" />
+              </div>
+              <button id="confirmBtn" type="submit" class="btn-amber font-semibold py-3.5 rounded-xl text-base">I've added you →</button>
+            </div>
+            <div data-success class="hidden rounded-xl border border-amber/40 bg-amber/10 px-5 py-4 text-center">
+              <p class="font-display text-lg font-semibold text-amber-light">Got it. ✓</p>
+              <p class="text-cream-soft text-[0.9rem] mt-1">We'll accept the invite shortly. Nothing else needed from you.</p>
+            </div>
+            <p data-error class="hidden text-center text-sm font-semibold text-amber-light bg-amber/10 border border-amber/30 rounded-xl py-3 px-4">
+              Couldn't send that. <a class="link" href="sms:+14042219111">Text us</a> and we'll handle it.
+            </p>
+          </form>
+
+          <!-- the not-the-owner branch -->
+          <details class="mt-6 pt-5 border-t border-[var(--line)]">
+            <summary class="flex items-center justify-between gap-3 text-sm font-semibold text-cream-soft">
+              Can't find it, or didn't set up your listing?
+              <svg class="chev w-4 h-4 text-amber shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </summary>
+            <form id="helpForm" class="mt-4 grid gap-4" novalidate>
+              <p class="text-sm text-cream-soft leading-relaxed">No problem — that usually just means someone else set up your Google listing. Tell us what you can and we'll track it down.</p>
+              <div data-fields class="grid gap-4">
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <input required name="business" type="text" autocomplete="organization" placeholder="Business name" class="field px-4 py-3 text-base" />
+                  <input required name="email" type="email" autocomplete="email" inputmode="email" placeholder="Your email" class="field px-4 py-3 text-base" />
+                </div>
+                <textarea required name="details" rows="3" placeholder="Who set up your Google listing, and what email might it be under? (a guess is fine)" class="field px-4 py-3 text-base"></textarea>
+                <button id="helpBtn" type="submit" class="btn-ghost font-semibold py-3.5 rounded-xl text-base">Send this to us →</button>
+              </div>
+              <div data-success class="hidden rounded-xl border border-amber/40 bg-amber/10 px-5 py-4 text-center">
+                <p class="font-display text-lg font-semibold text-amber-light">Sent. ✓</p>
+                <p class="text-cream-soft text-[0.9rem] mt-1">We'll sort out access and follow up by email.</p>
+              </div>
+              <p data-error class="hidden text-center text-sm font-semibold text-amber-light bg-amber/10 border border-amber/30 rounded-xl py-3 px-4">
+                Couldn't send that. <a class="link" href="sms:+14042219111">Text us</a> and we'll handle it.
+              </p>
+            </form>
+          </details>
+
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    var SUBMIT_ENDPOINT = '/api/grant-access';
+
+    // Copy the manager email.
+    (function () {
+      var btn = document.getElementById('copyEmail');
+      var email = document.getElementById('mgrEmail');
+      if (!btn || !email || !navigator.clipboard) return;
+      btn.addEventListener('click', function () {
+        navigator.clipboard.writeText(email.textContent.trim()).then(function () {
+          var original = btn.textContent;
+          btn.textContent = 'Copied ✓';
+          setTimeout(function () { btn.textContent = original; }, 1600);
+        });
+      });
+    })();
+
+    // Wire a form to the email API. `kind` is 'added' (confirm) or 'help'.
+    function wireForm(formId, buttonId, kind) {
+      var form = document.getElementById(formId);
+      var button = document.getElementById(buttonId);
+      if (!form || !button) return;
+      var ok = form.querySelector('[data-success]');
+      var err = form.querySelector('[data-error]');
+      var fields = form.querySelector('[data-fields]');
+
+      function setState(state) {
+        if (ok) ok.classList.toggle('hidden', state !== 'success');
+        if (err) err.classList.toggle('hidden', state !== 'error');
+        if (fields && state === 'success') fields.classList.add('hidden');
+      }
+
+      function val(name) {
+        var el = form.elements[name];
+        return el ? (el.value || '').trim() : '';
+      }
+
+      function buildPayload() {
+        var p = { kind: kind, business: val('business'), email: val('email') };
+        if (form.elements.details) p.details = val('details');
+        return p;
+      }
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        setState('idle');
+        if (!form.checkValidity()) { form.reportValidity(); return; }
+
+        var label = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Sending…';
+
+        fetch(SUBMIT_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(buildPayload()),
+        })
+          .then(function (res) { return res.json().catch(function () { return { ok: false }; }); })
+          .then(function (data) {
+            if (!data || !data.ok) throw new Error((data && data.error) || 'Request failed');
+            setState('success');
+          })
+          .catch(function (e) {
+            console.error('grant-access: submit failed —', e);
+            setState('error');
+            button.disabled = false;
+            button.textContent = label;
+          });
+      });
+    }
+
+    wireForm('confirmForm', 'confirmBtn', 'added');
+    wireForm('helpForm', 'helpBtn', 'help');
+  </script>
+</body>
+</html>
