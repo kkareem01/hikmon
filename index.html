@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Local Service Marketers — Top 3 on Google Maps in 30 days for home service businesses, or every month after is free</title>
-  <meta name="description" content="The A-List Celebrity System™ for home service business owners — HVAC, plumbing, electrical, roofing, and more. Just $397 every 4 weeks — no setup fee, cancel anytime. Top 3 on Google in 30 days, or every month after is free until you rank." />
+  <title>Local Service Marketers — Top 3 on Google Maps in 90 days for home service businesses, or every month after is free</title>
+  <meta name="description" content="The A-List Celebrity System™ for home service business owners — HVAC, plumbing, electrical, roofing, and more. Just $397 every 4 weeks — no setup fee, cancel anytime. Top 3 on Google in 90 days, or every month after is free until you rank." />
   <link rel="canonical" href="https://www.localservicemarketers.com/" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1216,6 +1216,41 @@
       color: var(--white);
       box-shadow: 0 3px 8px rgba(201, 123, 25, 0.30);
     }
+    /* Fit-check cards — light-section variant of the hero compare cards */
+    .fit-card {
+      border-radius: 16px;
+      padding: 18px 20px;
+      flex: 1;
+    }
+    .fit-not {
+      background: var(--white);
+      border: 1px solid var(--hairline);
+    }
+    .fit-for {
+      background: linear-gradient(180deg, rgba(201, 123, 25, 0.10) 0%, rgba(201, 123, 25, 0.03) 100%), var(--white);
+      border: 1px solid rgba(201, 123, 25, 0.45);
+      box-shadow: 0 16px 40px rgba(31, 61, 44, 0.10), 0 3px 10px rgba(31, 61, 44, 0.05);
+    }
+    .fit-row {
+      display: flex; gap: 9px; align-items: flex-start;
+      padding: 8px 0;
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: var(--forest-deep);
+    }
+    .fit-not .fit-row { color: var(--ash); }
+    .fit-mark-x, .fit-mark-check {
+      flex-shrink: 0; width: 17px; height: 17px;
+      border-radius: 9999px;
+      display: inline-flex; align-items: center; justify-content: center;
+      margin-top: 2px;
+    }
+    .fit-mark-x { background: rgba(31, 61, 44, 0.07); color: rgba(31, 61, 44, 0.38); }
+    .fit-mark-check {
+      background: linear-gradient(135deg, var(--amber-rich) 0%, var(--amber-glow) 100%);
+      color: var(--white);
+      box-shadow: 0 3px 8px rgba(201, 123, 25, 0.30);
+    }
     .ww-label {
       font-family: 'Fragment Mono', monospace;
       font-size: 11px;
@@ -1538,7 +1573,7 @@
       background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.6 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.5'/></svg>");
     }
 
-    /* 30-day guarantee badge */
+    /* 90-day guarantee badge */
     .guarantee-badge-section {
       max-width: 720px; margin: 0 auto; text-align: center;
     }
@@ -1662,7 +1697,7 @@
       <div class="mt-7 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-white/55 anim-fadeUp delay-700" style="font-family: 'Fragment Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;">
         <span>NO SETUP FEE</span>
         <span class="trust-divider"></span>
-        <span>30-DAY GUARANTEE</span>
+        <span>90-DAY GUARANTEE</span>
         <span class="trust-divider"></span>
         <span>CANCEL ANYTIME</span>
       </div>
@@ -1688,7 +1723,7 @@
             <div class="ww-row-mini"><span class="ww-mark-check-mini"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>$397 / 4 weeks. No setup fee.</span></div>
             <div class="ww-row-mini"><span class="ww-mark-check-mini"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Cancel any cycle. No penalty.</span></div>
             <div class="ww-row-mini"><span class="ww-mark-check-mini"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Phone keeps ringing through slow months.</span></div>
-            <div class="ww-row-mini"><span class="ww-mark-check-mini"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Top 3 on Google Maps in 30 days.</span></div>
+            <div class="ww-row-mini"><span class="ww-mark-check-mini"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>Top 3 on Google Maps in 90 days.</span></div>
           </div>
         </div>
 
@@ -1908,6 +1943,55 @@
     </div>
   </section>
 
+  <!-- ================== WHO IT'S FOR: GUT-CHECK FILTER (not-for / built-for) ================== -->
+  <section id="who-its-for" class="section-light py-16 md:py-24">
+    <div class="max-w-4xl mx-auto px-6">
+
+      <div class="text-center">
+        <div class="reveal" style="font-family: 'Source Serif 4', Georgia, serif; font-style: italic; font-size: clamp(20px, 2.4vw, 26px); color: var(--amber-rich); font-weight: 500; letter-spacing: -0.005em;">
+          A quick gut check
+        </div>
+        <h2 class="font-display reveal mt-3" data-stagger="1" style="font-size: clamp(40px, 5.6vw, 68px); line-height: 1.05; color: var(--forest-deep); font-weight: 700; letter-spacing: -0.025em; max-width: 22ch; margin-left: auto; margin-right: auto;">
+          This isn't for <span style="color: var(--amber-rich); font-style: italic;">every</span> owner.
+        </h2>
+        <p class="reveal mt-6 mx-auto" data-stagger="2" style="font-size: 18px; line-height: 1.65; color: var(--ash); max-width: 56ch;">
+          We only take on owners we can actually grow. Thirty seconds of honesty here saves us both a call.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-5 mx-auto" style="max-width: 880px;">
+
+        <div class="flex flex-col">
+          <div class="ww-label-out" style="color: var(--ash);">Not for you if&hellip;</div>
+          <div class="fit-card fit-not reveal" data-stagger="1">
+            <div class="fit-row"><span class="fit-mark-x"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>You're happy with your current volume and don't want more booked jobs.</span></div>
+            <div class="fit-row"><span class="fit-mark-x"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>Marketing feels like an expense to avoid, not an investment.</span></div>
+            <div class="fit-row"><span class="fit-mark-x"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>You'd rather wait and hope the next referral comes through.</span></div>
+            <div class="fit-row"><span class="fit-mark-x"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M3 3 L9 9 M9 3 L3 9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></span><span>You want things to stay exactly as they are.</span></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col">
+          <div class="ww-label-out" style="color: var(--amber-rich);">Built for you if&hellip;</div>
+          <div class="fit-card fit-for reveal" data-stagger="2">
+            <div class="fit-row"><span class="fit-mark-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You do quality work and have a real reputation to show for it.</span></div>
+            <div class="fit-row"><span class="fit-mark-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You want booked jobs to be predictable &mdash; not dependent on who happens to talk about you this month.</span></div>
+            <div class="fit-row"><span class="fit-mark-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You know your website, Google profile, and reviews should reflect how good you actually are.</span></div>
+            <div class="fit-row"><span class="fit-mark-check"><svg width="9" height="9" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span>You want to show up when homeowners are actively searching &mdash; not wait to be recommended.</span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-12 text-center reveal" data-stagger="3">
+        <p style="font-size: 16px; line-height: 1.6; color: var(--ash);">
+          Referrals built your business. <span style="color: var(--forest-deep); font-weight: 600;">Google is how you grow past them.</span>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- ================== INTRODUCING THE A-LIST CELEBRITY SYSTEM™ (single card) ================== -->
   <section id="introducing" class="section-elevated py-16 md:py-24">
     <div class="max-w-3xl mx-auto px-6 text-center">
@@ -1928,27 +2012,19 @@
         <div class="mt-6" style="display: flex; flex-direction: column; gap: 0;">
           <div class="feature-bullet">
             <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">A high-converting site for your trade, built to book jobs.</div></div>
+            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">SEO Trust Max Website &mdash; a fully new custom website flooded with trust signals, so Google, human, and AI visitors trust and recommend your business.</div></div>
           </div>
           <div class="feature-bullet">
             <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">A done-for-you full Google Business Profile optimization.</div></div>
+            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Monthly Google Business Profile Optimization &mdash; categories, services, photos, posts, descriptions, Q&amp;A, and local relevance &mdash; done for you.</div></div>
           </div>
           <div class="feature-bullet">
             <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Form-to-sell system: get notified the second someone fills out a form on your website.</div></div>
+            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Review + Lead Tracking System &mdash; call tracking, form tracking, review request automation, and a monthly report.</div></div>
           </div>
           <div class="feature-bullet">
             <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Weekly Google posts to keep your business fresh online.</div></div>
-          </div>
-          <div class="feature-bullet">
-            <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Review response automation &mdash; every review answered within hours.</div></div>
-          </div>
-          <div class="feature-bullet">
-            <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Top-3-in-30-days guarantee &mdash; in writing.</div></div>
+            <div><div class="font-semibold" style="font-size: 16px; color: var(--forest-deep);">Top-3-in-90-days guarantee &mdash; in writing.</div></div>
           </div>
           <div class="feature-bullet">
             <span class="feature-bullet-check"><svg width="11" height="11" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5L5 9L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -2008,8 +2084,8 @@
           </div>
           <div>
             <div class="stack-num">Item 01</div>
-            <div class="stack-title">High-converting trade website</div>
-            <div class="stack-sub">Built to book emergency calls, quote requests, financing, reviews. Mobile-first. Yours.</div>
+            <div class="stack-title">SEO Trust Max Website</div>
+            <div class="stack-sub">A fully new, custom, personalized website flooded with trust signals &mdash; so Google, human, and AI visitors trust your business and recommend it to others. Mobile-first. Yours.</div>
           </div>
           <div class="stack-value">Value: $3,000</div>
         </div>
@@ -2023,8 +2099,8 @@
           </div>
           <div>
             <div class="stack-num">Item 02</div>
-            <div class="stack-title">Done-for-you Google Profile optimization</div>
-            <div class="stack-sub">Categories. 30 services. Photos. Q&amp;A. Description. Out-indexes 90% of local pins &mdash; so Google, Bing, ChatGPT, even Alexa name you first.</div>
+            <div class="stack-title">Monthly Google Business Profile Optimization</div>
+            <div class="stack-sub">Categories, services, photos, posts, descriptions, Q&amp;A, and local relevance improvements. What you should already be doing &mdash; done for you, so you can focus on what you do best.</div>
           </div>
           <div class="stack-value">Value: $1,500</div>
         </div>
@@ -2043,50 +2119,13 @@
           </div>
           <div>
             <div class="stack-num">Item 03</div>
-            <div class="stack-title">Form-to-sell instant alerts</div>
-            <div class="stack-sub">The second a homeowner fills out a form on your site, your phone lights up. No portal in between.</div>
+            <div class="stack-title">Review + Lead Tracking System</div>
+            <div class="stack-sub">Call tracking, form tracking, review request automation, and a monthly report. You see every lead &mdash; and every review gets handled.</div>
           </div>
-          <div class="stack-value">Value: $500</div>
+          <div class="stack-value">Value: $1,700</div>
         </div>
 
         <div class="stack-row reveal" data-stagger="4">
-          <div class="stack-visual">
-            <svg width="50" height="46" viewBox="0 0 50 46" fill="none">
-              <rect x="5" y="6" width="40" height="34" rx="2" stroke="currentColor" stroke-width="2"/>
-              <line x1="5" y1="14" x2="45" y2="14" stroke="currentColor" stroke-width="2"/>
-              <line x1="14" y1="2" x2="14" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <line x1="36" y1="2" x2="36" y2="10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-              <rect x="10" y="20" width="6" height="5" rx="1" fill="currentColor"/>
-              <rect x="22" y="20" width="6" height="5" rx="1" fill="currentColor"/>
-              <rect x="34" y="20" width="6" height="5" rx="1" fill="currentColor"/>
-              <rect x="10" y="29" width="6" height="5" rx="1" fill="currentColor" fill-opacity="0.4"/>
-              <rect x="22" y="29" width="6" height="5" rx="1" fill="currentColor" fill-opacity="0.4"/>
-            </svg>
-          </div>
-          <div>
-            <div class="stack-num">Item 04</div>
-            <div class="stack-title">Weekly Google posts on autopilot</div>
-            <div class="stack-sub">Fresh ranking signals every week. Keeps your business looking active &mdash; without you logging in.</div>
-          </div>
-          <div class="stack-value">Value: $600/yr</div>
-        </div>
-
-        <div class="stack-row reveal" data-stagger="5">
-          <div class="stack-visual">
-            <svg width="50" height="42" viewBox="0 0 50 42" fill="none">
-              <path d="M4 6 C4 4 6 2 8 2 H42 C44 2 46 4 46 6 V24 C46 26 44 28 42 28 H22 L14 36 V28 H8 C6 28 4 26 4 24 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.10"/>
-              <path d="M25 7 L26.7 11.2 L31.2 11.2 L27.6 13.8 L29 18 L25 15.5 L21 18 L22.4 13.8 L18.8 11.2 L23.3 11.2 Z" fill="currentColor"/>
-            </svg>
-          </div>
-          <div>
-            <div class="stack-num">Item 05</div>
-            <div class="stack-title">Review response automation</div>
-            <div class="stack-sub">Every review answered with a branded reply within hours. Reputation actively managed.</div>
-          </div>
-          <div class="stack-value">Value: $600/yr</div>
-        </div>
-
-        <div class="stack-row reveal" data-stagger="6">
           <div class="stack-visual">
             <svg width="40" height="50" viewBox="0 0 40 50" fill="none">
               <path d="M20 3 L34 9 V22 C34 31 20 44 20 44 C20 44 6 31 6 22 V9 Z" stroke="currentColor" stroke-width="2" fill="currentColor" fill-opacity="0.18"/>
@@ -2094,8 +2133,8 @@
             </svg>
           </div>
           <div>
-            <div class="stack-num">Item 06</div>
-            <div class="stack-title">Top-3-in-30-Days Guarantee</div>
+            <div class="stack-num">Item 04</div>
+            <div class="stack-title">Top-3-in-90-Days Guarantee</div>
             <div class="stack-sub">In writing. If we miss, every month after is free until you rank. You stop being charged.</div>
           </div>
           <div class="stack-value stack-value-priceless">Priceless</div>
@@ -2154,15 +2193,19 @@
           <div class="mt-6">
             <div class="price-feature">
               <span class="price-check"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span>High-converting website built to book jobs</span>
+              <span>SEO Trust Max Website &mdash; built to win trust and book jobs</span>
             </div>
             <div class="price-feature">
               <span class="price-check"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span>Google Business Profile rebuilt and optimized</span>
+              <span>Monthly Google Business Profile Optimization</span>
             </div>
             <div class="price-feature">
               <span class="price-check"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-              <span>Top 3 in 30 days, or every month after is free</span>
+              <span>Review + Lead Tracking System &mdash; calls, forms, reviews, monthly report</span>
+            </div>
+            <div class="price-feature">
+              <span class="price-check"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+              <span>Top 3 in 90 days, or every month after is free</span>
             </div>
             <div class="price-feature">
               <span class="price-check"><svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M2.5 6.5 L5 9 L9.5 3.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
@@ -2205,13 +2248,13 @@
         </div>
 
         <div class="timeline-card reveal" data-stagger="2">
-          <div class="timeline-when">Within 30 Days</div>
+          <div class="timeline-when">Within 90 Days</div>
           <h3 class="timeline-headline">You hit top 3.</h3>
           <p class="timeline-body">Your Google Maps pin shows up first for your main local search. If we miss, every month after is free until you rank.</p>
         </div>
 
         <div class="timeline-card reveal" data-stagger="3">
-          <div class="timeline-when">Within 60 Days</div>
+          <div class="timeline-when">Every Month After</div>
           <h3 class="timeline-headline">Organic inbound calls keep coming.</h3>
           <p class="timeline-body">Organic inbound calls stay steady &mdash; even in shoulder season. You stop paying for Angi leads. Your cost per booked call drops.</p>
         </div>
@@ -2225,7 +2268,7 @@
             <path d="M3 8 H13 M9 4 L13 8 L9 12" stroke="white" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
-        <div class="cta-microtrust">30-day guarantee · No setup fee · Cancel anytime</div>
+        <div class="cta-microtrust">90-day guarantee · No setup fee · Cancel anytime</div>
       </div>
     </div>
   </section>
@@ -2316,19 +2359,19 @@
             </span>
           </button>
           <div class="faq-content">
-            <p class="faq-answer">It wasn't your fault. The old model is broken. $5K&ndash;$15K upfront. 12-month contract. The account manager goes silent. We keep it simple: just $397 every 4 weeks &mdash; no setup fee, cancel anytime. No 12-month lock-in. We guarantee top 3 in 30 days, or every month after is free. If we miss, you literally stop being charged.</p>
+            <p class="faq-answer">It wasn't your fault. The old model is broken. $5K&ndash;$15K upfront. 12-month contract. The account manager goes silent. We keep it simple: just $397 every 4 weeks &mdash; no setup fee, cancel anytime. No 12-month lock-in. We guarantee top 3 in 90 days, or every month after is free. If we miss, you literally stop being charged.</p>
           </div>
         </div>
 
         <div class="faq-item reveal" data-stagger="3">
           <button class="faq-trigger" aria-expanded="false">
-            <span class="faq-question">What if you don't hit top 3 in 30 days?</span>
+            <span class="faq-question">What if you don't hit top 3 in 90 days?</span>
             <span class="faq-icon">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 2 V12 M2 7 H12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
             </span>
           </button>
           <div class="faq-content">
-            <p class="faq-answer">Every 4-week cycle after day 30 is free until you rank. You also keep your website, your Google profile, and your Lead Snap dashboard during the free period. If we never deliver, you never pay another dollar.</p>
+            <p class="faq-answer">Every 4-week cycle after day 90 is free until you rank. You also keep your website, your Google profile, and your Lead Snap dashboard during the free period. If we never deliver, you never pay another dollar.</p>
           </div>
         </div>
 
@@ -2340,7 +2383,7 @@
             </span>
           </button>
           <div class="faq-content">
-            <p class="faq-answer">Yes. Our system is built for any B2C residential home service trade &mdash; plumbing, electrical, roofing, garage door, pest control, landscaping, pool, cleaning, and more. HVAC was our first vertical and remains our deepest. The same Top-3-in-30-days guarantee applies to every trade we take on.</p>
+            <p class="faq-answer">Yes. Our system is built for any B2C residential home service trade &mdash; plumbing, electrical, roofing, garage door, pest control, landscaping, pool, cleaning, and more. HVAC was our first vertical and remains our deepest. The same Top-3-in-90-days guarantee applies to every trade we take on.</p>
           </div>
         </div>
 
@@ -2384,7 +2427,7 @@
     </div>
   </section>
 
-  <!-- ================== 30-DAY GUARANTEE (compact, side-by-side with seal) ================== -->
+  <!-- ================== 90-DAY GUARANTEE (compact, side-by-side with seal) ================== -->
   <section id="guarantee" class="section-light py-12 md:py-16">
     <div class="max-w-4xl mx-auto px-6">
       <div class="grid grid-cols-1 md:grid-cols-[180px_1fr] gap-8 items-center">
@@ -2400,10 +2443,10 @@
         <div class="text-center md:text-left">
           <span class="eyebrow-amber reveal" data-stagger="1">In writing</span>
           <h2 class="font-display mt-3 reveal" data-stagger="2" style="font-size: clamp(24px, 3.2vw, 34px); line-height: 1.15; color: var(--forest-deep); font-weight: 700; letter-spacing: -0.02em;">
-            Top 3 in 30 days. Or every month after is free.
+            Top 3 in 90 days. Or every month after is free.
           </h2>
           <p class="mt-4 reveal" data-stagger="3" style="font-size: 15px; line-height: 1.6; color: var(--ash);">
-            If we don't rank you top 3 on Google Maps for your primary local search by day 30, every cycle after is free until we do. You keep your website, your Google profile, and your dashboard the whole time. <strong style="color: var(--forest-deep);">If we never deliver, you never pay another dollar.</strong>
+            If we don't rank you top 3 on Google Maps for your primary local search by day 90, every cycle after is free until we do. You keep your website, your Google profile, and your dashboard the whole time. <strong style="color: var(--forest-deep);">If we never deliver, you never pay another dollar.</strong>
           </p>
         </div>
 
@@ -2425,7 +2468,7 @@
           </span>
 
           <h2 class="font-display text-white mt-5" style="font-size: clamp(28px, 3.6vw, 42px); line-height: 1.1; letter-spacing: -0.025em; font-weight: 700; max-width: 22ch; margin-left: auto; margin-right: auto;">
-            Get top 3 on Google in 30 days.<br/>Or <span class="headline-emph">every month after is free.</span>
+            Get top 3 on Google in 90 days.<br/>Or <span class="headline-emph">every month after is free.</span>
           </h2>
 
           <p class="mt-5 mx-auto max-w-[56ch]" style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.78);">
@@ -2467,7 +2510,7 @@
             <span class="font-display text-[18px] font-semibold tracking-tight">Local Service Marketers</span>
           </a>
           <p class="mt-4 max-w-[42ch]" style="font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.55);">
-            The A-List Celebrity System™ for home service business owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 30 days, or every month after is free.
+            The A-List Celebrity System™ for home service business owners. We turn your Google Business Profile and website into assets you actually own — top 3 on Google Maps in 90 days, or every month after is free.
           </p>
           <a href="mailto:kareem@hikmon.net" class="footer-link mt-5 inline-flex items-center gap-2" style="font-family: 'Fragment Mono', monospace; font-size: 12px; letter-spacing: 0.08em;">
             <svg width="13" height="10" viewBox="0 0 13 10" fill="none" aria-hidden="true">
