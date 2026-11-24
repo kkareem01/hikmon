@@ -9,13 +9,14 @@
     strategy: [
       { name: 'businessName', label: 'Business name', type: 'text', required: true,
         maxLength: 80, placeholder: 'Business name *' },
-      { name: 'trade', label: 'Your trade', type: 'select', required: true,
-        options: ['HVAC', 'Plumbing', 'Electrical', 'Roofing', 'Garage doors',
-          'Landscaping', 'Pest control', 'Cleaning', 'Painting', 'Other home service'] },
+      { name: 'trade', label: 'Your industry', type: 'select', required: true,
+        options: ['Home services (HVAC, plumbing, roofing…)', 'Auto repair & services', 'Appliance repair',
+          'Health, wellness & clinics', 'Rehab & treatment', 'Accounting & professional services',
+          'Legal', 'Retail & specialty shops', 'Beauty & personal care', 'Other'] },
       { name: 'currentSite', label: 'Current website (optional)', type: 'text', required: false,
         maxLength: 200, placeholder: 'yoursite.com — or leave blank' },
       { name: 'notes', label: "Biggest challenge right now? (optional)", type: 'textarea', required: false,
-        maxLength: 500, placeholder: 'Slow phone, losing jobs to competitors, outdated website…' },
+        maxLength: 500, placeholder: 'Slow phone, losing customers to competitors, outdated website…' },
     ],
   };
 
