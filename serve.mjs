@@ -1,5 +1,5 @@
 /**
- * Local dev server for hikmon.net.
+ * Local dev server for localservicemarketers.com.
  * - Serves static files (Vercel does this in prod), clean-URL aware.
  * - Routes the booking API (/api/*) to lib/handlers.mjs, mirroring the Vercel
  *   serverless functions in /api/*.mjs so the booking flow works locally.

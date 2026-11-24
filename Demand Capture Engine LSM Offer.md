@@ -5,10 +5,10 @@
 > **Your Category:** A-List Celebrity System™
 > 
 > 
-> **Category One-Liner:** Hikmon transforms your Google Business Profile and your website into an asset you actually own so you stop renting calls from Angi, Yelp, and bloated agencies, and generate booked calls even in the slow season.
+> **Category One-Liner:** Local Service Marketers transforms your Google Business Profile and your website into an asset you actually own so you stop renting calls from Angi, Yelp, and bloated agencies, and generate booked calls even in the slow season.
 > 
 
-**Why this category works:** "Owned" is the wedge against your ICP's #1 felt pain (renting leads from Angi/HomeAdvisor/LSAs). Home service marketing today is rented. Hikmon makes it owned. That's the frame.
+**Why this category works:** "Owned" is the wedge against your ICP's #1 felt pain (renting leads from Angi/HomeAdvisor/LSAs). Home service marketing today is rented. Local Service Marketers makes it owned. That's the frame.
 
 ---
 
@@ -91,7 +91,7 @@
 
 ## 5. THE GRAND SLAM OFFER
 
-**The Done-For-You Standard:** The owner does ONE thing — a 30-minute onboarding call + fills out the typeform + grants GBP access. Everything else (website build, domain connect, GBP optimization, photo upload, Q&A, post automation, review response, phone routing) is done by Hikmon. Owner's ongoing time required: **near zero.**
+**The Done-For-You Standard:** The owner does ONE thing — a 30-minute onboarding call + fills out the typeform + grants GBP access. Everything else (website build, domain connect, GBP optimization, photo upload, Q&A, post automation, review response, phone routing) is done by Local Service Marketers. Owner's ongoing time required: **near zero.**
 
 **Core Promise:**
 
@@ -193,7 +193,7 @@
 
 ## 9. THE CONTINUITY BRIDGE
 
-**Important note:** Hikmon's offer IS continuity. There is no separate retainer. The continuity structure is **built into the entry offer** through three sticky levers:
+**Important note:** Local Service Marketers' offer IS continuity. There is no separate retainer. The continuity structure is **built into the entry offer** through three sticky levers:
 
 1. **The Lock-In Mechanism (already built in):** Client loses the website + the GBP optimizations + the rankings the day they cancel. This is your moat. Don't apologize for it — frame it as "you own it as long as you're with us, just like you own your truck as long as you make the payment."
 
@@ -222,7 +222,7 @@
 
 ## FINAL SUMMARY
 
-`HIKMON OFFER SUMMARY
+`LOCAL SERVICE MARKETERS OFFER SUMMARY
 ---------------------------------------
 Category:     A-List Celebrity System™ering
 Mechanism:    The A-List Celebrity System™

@@ -14,12 +14,12 @@ You're generating **3 secrets** to put in Vercel:
 `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`, `GOOGLE_REFRESH_TOKEN`.
 
 ### 1. Create a Google Cloud project + enable the Calendar API
-1. Go to <https://console.cloud.google.com/> → create a project (e.g. "Hikmon Booking").
+1. Go to <https://console.cloud.google.com/> → create a project (e.g. "Local Service Marketers Booking").
 2. **APIs & Services → Library** → search **Google Calendar API** → **Enable**.
 
 ### 2. Configure the OAuth consent screen
 1. **APIs & Services → OAuth consent screen** → User type **External** → fill app name
-   ("Hikmon"), your support email, developer email → Save.
+   ("Local Service Marketers"), your support email, developer email → Save.
 2. **Scopes**: add `https://www.googleapis.com/auth/calendar.events` → Save.
 3. **Publishing status**: set the app to **In production** (Audience tab → Publish app).
    - IMPORTANT: in "Testing" mode Google expires the refresh token after **7 days**, so
@@ -45,7 +45,7 @@ You're generating **3 secrets** to put in Vercel:
 6. Copy the **Refresh token** value. That's `GOOGLE_REFRESH_TOKEN`.
 
 ### 5. Add the 3 vars to Vercel
-Vercel → Project (hikmon) → **Settings → Environment Variables** → add for **Production**:
+Vercel → Project (lsm) → **Settings → Environment Variables** → add for **Production**:
 
 | Name | Value |
 |------|-------|

@@ -65,9 +65,9 @@ export default async function (req, res) {
     return json(res, 400, { ok: false, error: 'Tell us who set up your listing so we can help.' });
   }
 
-  const fromEmail = process.env.FROM_EMAIL || 'kareem@hikmon.net';
+  const fromEmail = process.env.FROM_EMAIL || 'kareem@localservicemarketers.com';
   const ownerEmail = process.env.OWNER_EMAIL || process.env.KAREEM_EMAIL || fromEmail;
-  const businessName = process.env.BUSINESS_NAME || 'Hikmon';
+  const businessName = process.env.BUSINESS_NAME || 'Local Service Marketers';
 
   const tpl = gbpAccessRequestEmail({ kind, name, email, business, listing, details });
   const result = await sendEmail({

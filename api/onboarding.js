@@ -70,7 +70,7 @@ function receiptFor(recordNumber, sessionId) {
 }
 
 function cloudinaryFolderUrl(sessionId) {
-  const cloud = process.env.CLOUDINARY_CLOUD_NAME || 'hikmon';
+  const cloud = process.env.CLOUDINARY_CLOUD_NAME || 'lsm';
   const q = encodeURIComponent(`folder:hikmon/${sessionId}`);
   return `https://console.cloudinary.com/console/${cloud}/media_library/search?q=${q}`;
 }
@@ -140,7 +140,7 @@ module.exports = async (req, res) => {
   } catch (err) {
     // A real Stripe session is required — without it we cannot trust the sale.
     return json(res, 402, {
-      error: 'Could not verify your purchase. Please contact kareem@hikmon.net.',
+      error: 'Could not verify your purchase. Please contact kareem@localservicemarketers.com.',
       detail: err && err.message ? err.message : String(err),
     });
   }
@@ -238,8 +238,8 @@ module.exports = async (req, res) => {
   // ---- Build + send emails ------------------------------------------------
   const { Resend } = require('resend');
   const resend = new Resend(process.env.RESEND_API_KEY);
-  const fromEmail = process.env.FROM_EMAIL || 'kareem@hikmon.net';
-  const from = `Kareem at Hikmon <${fromEmail}>`;
+  const fromEmail = process.env.FROM_EMAIL || 'kareem@localservicemarketers.com';
+  const from = `Kareem at Local Service Marketers <${fromEmail}>`;
 
   const emailArgs = {
     customerName,
@@ -322,7 +322,7 @@ module.exports = async (req, res) => {
     return json(res, 500, {
       error:
         'We could not save your submission. Your answers are still here — ' +
-        'please try Submit again, or email kareem@hikmon.net.',
+        'please try Submit again, or email kareem@localservicemarketers.com.',
     });
   }
 

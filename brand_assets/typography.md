@@ -1,4 +1,4 @@
-# Hikmon Typography System
+# Local Service Marketers Typography System
 
 Three-font system: serif headline signals **authority and permanence** (the established trades), grotesque sans body keeps copy **legible and modern**, and a monospace accent reinforces **precision/blueprint** vibes (specs, technical credibility, the trades own this aesthetic). Avoid Inter+Inter — generic SaaS tell.
 

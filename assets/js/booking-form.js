@@ -1,4 +1,4 @@
-/* Hikmon — booking form (steps 1+2). Renders into [data-region="form"].
+/* Local Service Marketers — booking form (steps 1+2). Renders into [data-region="form"].
    Single "strategy" audience. FIELD_SCHEMAS must stay in sync with
    lib/audiences.mjs (server warns at boot if names drift).
    NOTE: the hidden honeypot is name="website", so the real "current site"

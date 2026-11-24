@@ -1,8 +1,8 @@
 /* ============================================================
-   Hikmon booking widget styles.
+   Local Service Marketers booking widget styles.
    Ported from the suit-warehouse booking system; the rules below
    are token-based, so re-theming = remapping the tokens here to
-   Hikmon's forest/amber palette. Loaded only on /booking and
+   Local Service Marketers' forest/amber palette. Loaded only on /booking and
    /booking-confirmed (their own pages), so it can't affect the
    homepage. The booking rule block under the divider is copied
    verbatim from the source and must not be hand-edited.

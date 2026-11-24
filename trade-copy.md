@@ -5,7 +5,7 @@ Canonical per-trade copy for the 12 trade landing pages. Edit copy **here first*
 ## Propagation rules
 
 - Every trade-specific block in the HTML is wrapped with `<!-- TRADE-COPY-BLOCK: <id> --> ... <!-- /TRADE-COPY-BLOCK -->` markers.
-- To propagate a copy change: edit the field below, then `grep -n "TRADE-COPY-BLOCK: <id>" Hikmon\ Website/*.html` to find every matching block across all 12 pages and update each.
+- To propagate a copy change: edit the field below, then `grep -n "TRADE-COPY-BLOCK: <id>" Local\ Service\ Marketers/*.html` to find every matching block across all 12 pages and update each.
 - "Universal copy" (below) is identical across all 12 files. If you change anything there, propagate to ALL 12 files.
 - Per-trade fields are unique to one file. Only that file gets updated when the field changes.
 
@@ -40,7 +40,7 @@ Canonical per-trade copy for the 12 trade landing pages. Edit copy **here first*
 
 **Final CTA trust strip** (lines 2270–2274): `$297–$397 / 4 weeks · NO SETUP FEE · CANCEL ANYTIME`
 
-**Footer copyright** (line 2340): `© 2026 HIKMON · ALL RIGHTS RESERVED`
+**Footer copyright** (line 2340): `© 2026 LOCAL SERVICE MARKETERS · ALL RIGHTS RESERVED`
 
 **Footer ownership tag suffix** (line 2343): `· OWNED, NOT RENTED` (the `BUILT FOR <TRADE>` prefix is per-trade)
 
@@ -92,7 +92,7 @@ Also per trade but separate from the HTML markers:
 ## HVAC
 
 ### Slug & canonical
-`hvac` → `hvac.html` → `https://hikmon.com/hvac.html`
+`hvac` → `hvac.html` → `https://localservicemarketers.com/hvac`
 
 ### Trade noun forms
 - Sentence: `HVAC` (always uppercase)
@@ -102,7 +102,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR HVAC`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential HVAC, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential HVAC, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential HVAC owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -194,7 +194,7 @@ Also per trade but separate from the HTML markers:
 ## Plumbing
 
 ### Slug & canonical
-`plumbing` → `plumbing.html` → `https://hikmon.com/plumbing.html`
+`plumbing` → `plumbing.html` → `https://localservicemarketers.com/plumbing`
 
 ### Trade noun forms
 - Sentence: `plumbing`
@@ -204,7 +204,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR PLUMBING`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential plumbing, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential plumbing, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential plumbing owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -296,7 +296,7 @@ Also per trade but separate from the HTML markers:
 ## Electrical
 
 ### Slug & canonical
-`electrical` → `electrical.html` → `https://hikmon.com/electrical.html`
+`electrical` → `electrical.html` → `https://localservicemarketers.com/electrical`
 
 ### Trade noun forms
 - Sentence: `electrical`
@@ -306,7 +306,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR ELECTRICAL`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential electrical, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential electrical, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential electrical contractors. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -398,7 +398,7 @@ Also per trade but separate from the HTML markers:
 ## Roofing
 
 ### Slug & canonical
-`roofing` → `roofing.html` → `https://hikmon.com/roofing.html`
+`roofing` → `roofing.html` → `https://localservicemarketers.com/roofing`
 
 ### Trade noun forms
 - Sentence: `roofing`
@@ -408,7 +408,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR ROOFING`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential roofing, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential roofing, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential roofing owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -500,7 +500,7 @@ Also per trade but separate from the HTML markers:
 ## Garage Door
 
 ### Slug & canonical
-`garage-door` → `garage-door.html` → `https://hikmon.com/garage-door.html`
+`garage-door` → `garage-door.html` → `https://localservicemarketers.com/garage-door`
 
 ### Trade noun forms
 - Sentence: `garage doors` (plural in title/meta); `garage door` (singular in compound nouns)
@@ -510,7 +510,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR GARAGE DOORS`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential garage doors, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential garage doors, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential garage door owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -602,7 +602,7 @@ Also per trade but separate from the HTML markers:
 ## Pest Control
 
 ### Slug & canonical
-`pest-control` → `pest-control.html` → `https://hikmon.com/pest-control.html`
+`pest-control` → `pest-control.html` → `https://localservicemarketers.com/pest-control`
 
 ### Trade noun forms
 - Sentence: `pest control`
@@ -612,7 +612,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR PEST CONTROL`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential pest control, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential pest control, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential pest control owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -704,7 +704,7 @@ Also per trade but separate from the HTML markers:
 ## Landscaping
 
 ### Slug & canonical
-`landscaping` → `landscaping.html` → `https://hikmon.com/landscaping.html`
+`landscaping` → `landscaping.html` → `https://localservicemarketers.com/landscaping`
 
 ### Trade noun forms
 - Sentence: `landscaping`
@@ -714,7 +714,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR LANDSCAPING`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential landscaping, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential landscaping, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential landscaping owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -806,7 +806,7 @@ Also per trade but separate from the HTML markers:
 ## Pool
 
 ### Slug & canonical
-`pool` → `pool.html` → `https://hikmon.com/pool.html`
+`pool` → `pool.html` → `https://localservicemarketers.com/pool`
 
 ### Trade noun forms
 - Sentence: `pool service`
@@ -816,7 +816,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR POOL SERVICE`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential pool service, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential pool service, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential pool service owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -908,7 +908,7 @@ Also per trade but separate from the HTML markers:
 ## Cleaning
 
 ### Slug & canonical
-`cleaning` → `cleaning.html` → `https://hikmon.com/cleaning.html`
+`cleaning` → `cleaning.html` → `https://localservicemarketers.com/cleaning`
 
 ### Trade noun forms
 - Sentence: `cleaning`
@@ -918,7 +918,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR CLEANING`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential cleaning, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential cleaning, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential cleaning owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -1010,7 +1010,7 @@ Also per trade but separate from the HTML markers:
 ## Painting
 
 ### Slug & canonical
-`painting` → `painting.html` → `https://hikmon.com/painting.html`
+`painting` → `painting.html` → `https://localservicemarketers.com/painting`
 
 ### Trade noun forms
 - Sentence: `painting`
@@ -1020,7 +1020,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR PAINTING`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential painting, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential painting, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential painting owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -1112,7 +1112,7 @@ Also per trade but separate from the HTML markers:
 ## Handyman
 
 ### Slug & canonical
-`handyman` → `handyman.html` → `https://hikmon.com/handyman.html`
+`handyman` → `handyman.html` → `https://localservicemarketers.com/handyman`
 
 ### Trade noun forms
 - Sentence: `handyman work` (in title/meta); `handyman` (in compound nouns)
@@ -1122,7 +1122,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR HANDYMAN`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential handyman work, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential handyman work, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential handyman businesses. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`
@@ -1214,7 +1214,7 @@ Also per trade but separate from the HTML markers:
 ## Flooring
 
 ### Slug & canonical
-`flooring` → `flooring.html` → `https://hikmon.com/flooring.html`
+`flooring` → `flooring.html` → `https://localservicemarketers.com/flooring`
 
 ### Trade noun forms
 - Sentence: `flooring`
@@ -1224,7 +1224,7 @@ Also per trade but separate from the HTML markers:
 - Footer caps: `BUILT FOR FLOORING`
 
 ### title
-`Hikmon — Top 3 on Google Maps in 30 days for residential flooring, or every month after is free`
+`Local Service Marketers — Top 3 on Google Maps in 30 days for residential flooring, or every month after is free`
 
 ### meta-description
 `The A-List Celebrity System™ for residential flooring owners. $297–$397 / 4 weeks. No setup fee. No 12-month contract. Top 3 on Google in 30 days, or every month after is free until you rank.`

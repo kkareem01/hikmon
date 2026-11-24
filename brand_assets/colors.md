@@ -1,4 +1,4 @@
-# Hikmon Color System
+# Local Service Marketers Color System
 
 Brand direction: warm + trustworthy for local home service business owners (HVAC, plumbing, electrical, roofing, garage door, pest control, landscaping, pool service, cleaning, painting, handyman, flooring).
 

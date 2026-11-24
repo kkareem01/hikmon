@@ -41,7 +41,7 @@ function renderKareemEmail(args) {
   const p = payload || {};
   const s = stripe || {};
 
-  const subject = `[Hikmon] New client: ${p.bizName || 'Unknown'} — ${p.trade || '?'}, ${p.plan || '?'}`;
+  const subject = `[Local Service Marketers] New client: ${p.bizName || 'Unknown'} — ${p.trade || '?'}, ${p.plan || '?'}`;
 
   const submittedAt = p.submittedAt ? new Date(p.submittedAt) : new Date();
   const when = submittedAt.toLocaleString('en-US', {

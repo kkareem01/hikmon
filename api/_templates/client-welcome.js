@@ -4,7 +4,7 @@
 // mirrors the welcome.html intake form back to the customer as a formal
 // "profile" receipt. All CSS is inlined per-element for Gmail/Outlook/iOS.
 //
-// Brand tokens (Hikmon Website/brand_assets/colors.md):
+// Brand tokens (Local Service Marketers/brand_assets/colors.md):
 //   forest #1F3D2C · amber #C97B19 · white #FFFFFF · elevated #FAFAF7
 //   hairline #ECECE7 · charcoal #1A1A1A · ash #6B6B6B
 
@@ -199,7 +199,7 @@ function renderClientEmail(args) {
     .toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
     .toUpperCase();
 
-  const subject = `Hikmon — your profile (#${receiptShort}) is locked in for ${bizName || 'your business'}`;
+  const subject = `Local Service Marketers — your profile (#${receiptShort}) is locked in for ${bizName || 'your business'}`;
   const preheader = 'Everything you just submitted, mirrored back. Here is what happens next.';
 
   const html = `<!doctype html>
@@ -222,7 +222,7 @@ function renderClientEmail(args) {
           <td style="vertical-align:middle;">
             <table cellpadding="0" cellspacing="0" border="0"><tr>
               <td width="30" height="30" bgcolor="${C.amber}" style="width:30px;height:30px;border-radius:7px;text-align:center;vertical-align:middle;font-family:${SERIF};font-weight:bold;font-size:16px;color:${C.white};">H</td>
-              <td style="padding-left:10px;font-family:${SERIF};font-weight:bold;font-size:18px;color:${C.white};">Hikmon</td>
+              <td style="padding-left:10px;font-family:${SERIF};font-weight:bold;font-size:18px;color:${C.white};">Local Service Marketers</td>
             </tr></table>
           </td>
           <td align="right" style="vertical-align:middle;font-family:${MONO};font-size:11px;letter-spacing:0.08em;color:rgba(255,255,255,0.82);">RECEIPT · #${esc(receiptShort)} · ${esc(dateShort)}</td>
@@ -270,14 +270,14 @@ function renderClientEmail(args) {
         <div style="border-top:1px solid ${C.hairline};padding-top:22px;">
           <p style="margin:0 0 4px;font-family:${SANS};font-size:15px;color:${C.charcoal};">Building this for you,</p>
           <p style="margin:0;font-family:${SERIF};font-weight:bold;font-size:18px;color:${C.forest};">Kareem</p>
-          <p style="margin:2px 0 0;font-family:${SANS};font-size:14px;color:${C.ash};">Hikmon · <a href="mailto:kareem@hikmon.net" style="color:${C.amber};text-decoration:none;">kareem@hikmon.net</a></p>
+          <p style="margin:2px 0 0;font-family:${SANS};font-size:14px;color:${C.ash};">Local Service Marketers · <a href="mailto:kareem@localservicemarketers.com" style="color:${C.amber};text-decoration:none;">kareem@localservicemarketers.com</a></p>
           <p style="margin:14px 0 0;font-family:${SANS};font-size:13px;line-height:1.5;color:${C.ash};">If anything in your profile above is wrong, just reply to this email &mdash; I read every one.</p>
         </div>
       </td></tr>
 
       <!-- Footer -->
       <tr><td style="background:${C.elevated};border-radius:0 0 12px 12px;padding:18px 28px;text-align:center;font-family:${SANS};font-size:12px;color:${C.ash};">
-        Hikmon &middot; A-List Celebrity System™ for home service businesses
+        Local Service Marketers &middot; A-List Celebrity System™ for home service businesses
       </td></tr>
 
     </table>
@@ -315,7 +315,7 @@ function renderClientEmail(args) {
     '',
     'Building this for you,',
     'Kareem',
-    'Hikmon · kareem@hikmon.net',
+    'Local Service Marketers · kareem@localservicemarketers.com',
     '',
     'If anything in your profile is wrong, just reply to this email.',
   ]

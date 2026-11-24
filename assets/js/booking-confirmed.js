@@ -1,4 +1,4 @@
-/* Hikmon — strategy-call confirmation hydrator.
+/* Local Service Marketers — strategy-call confirmation hydrator.
    Reads ?id= from the URL, fetches /api/bookings/:id, fills the page. */
 
 (function () {
@@ -58,7 +58,7 @@
     try {
       res = await fetch(`/api/bookings/${encodeURIComponent(id)}`);
     } catch (_) {
-      return showError("We couldn't reach the server. Email kareem@hikmon.net and we'll sort it.");
+      return showError("We couldn't reach the server. Email kareem@localservicemarketers.com and we'll sort it.");
     }
     if (!res.ok) return showError("That booking wasn't found.");
     const json = await res.json();
@@ -108,7 +108,7 @@
     const ics = document.querySelector('[data-region="ics-link"]');
     if (ics) ics.href = `/api/bookings/${encodeURIComponent(b.id)}/ics`;
 
-    document.title = `Booked · ${dateLong} at ${time12} · Hikmon`;
+    document.title = `Booked · ${dateLong} at ${time12} · Local Service Marketers`;
   }
 
   document.addEventListener('DOMContentLoaded', init);

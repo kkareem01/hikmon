@@ -1,11 +1,11 @@
 # Ideal Client Profile (ICP)
 
 ## ICP Statement
-Hikmon's ICP is **the offline expert**: a founder-led or family-owned residential home service business (HVAC, plumbing, electrical, roofing, garage door, pest control, landscaping, pool, cleaning, painting, handyman, flooring, and other B2C trades), 35–60 years old, operating in a competitive U.S. or Canadian local market. Excellent at their craft, invisible online, tired of paying for shared leads. They want a predictable local acquisition engine they own.
+Local Service Marketers' ICP is **the offline expert**: a founder-led or family-owned residential home service business (HVAC, plumbing, electrical, roofing, garage door, pest control, landscaping, pool, cleaning, painting, handyman, flooring, and other B2C trades), 35–60 years old, operating in a competitive U.S. or Canadian local market. Excellent at their craft, invisible online, tired of paying for shared leads. They want a predictable local acquisition engine they own.
 
 In one line: **a home service business owner who is good at what they do, wants to grow, and understands that word of mouth should not be their only source of new business.**
 
-HVAC is Hikmon's first and deepest vertical. The same offer and guarantee extend to every B2C residential home service trade.
+HVAC is Local Service Marketers' first and deepest vertical. The same offer and guarantee extend to every B2C residential home service trade.
 
 ## Mindset Qualifier (must-have)
 The agency is built for owners who want to grow **beyond referrals and word of mouth**. Referrals are great. Word of mouth is powerful. If they've been successful for 10, 15, or 20+ years on reputation alone, that's something to be proud of — but if the entire business depends only on referrals, growth is limited by how many people happen to talk about them.
@@ -22,7 +22,7 @@ Do not chase or try to convince:
 - Owners who are **afraid of change** or **resistant to marketing** as a category.
 - Owners satisfied staying exactly where they are.
 
-These owners are not wrong — they're just not a fit. Hikmon's job is to amplify ambition that already exists, not to manufacture it.
+These owners are not wrong — they're just not a fit. Local Service Marketers' job is to amplify ambition that already exists, not to manufacture it.
 
 ## Client Avatar
 They are typically 35–60 years old, located in competitive local markets across the U.S. or Canada, and are often either founder-led, family-owned, or second-generation operators.
